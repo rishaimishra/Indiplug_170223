@@ -1,83 +1,77 @@
-// import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';
 import React, { createContext, useEffect, useState } from 'react';
-import { BASE_URL } from '../config';
-import { AsyncStorage } from 'react-native';
-// import { useNavigation } from '@react-navigation/native';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useNavigation, CommonActions } from '@react-navigation/native';
+import BASE_URL from '../config';
 
 export const AuthContext = createContext();
 
-export const AuthProvider = ({ children }) => {
+export function AuthProvider({ children }) {
   const [userInfo, setUserInfo] = useState({});
   const [isLoading, setIsLoading] = useState(false);
   const [splashLoading, setSplashLoading] = useState(false);
   const [token, setToken] = useState();
 
-  // const navigation = useNavigation();
+  const navigation = useNavigation();
+
+  async function getToken() {
+    const tkn = await AsyncStorage.getItem('token');
+    setToken(tkn);
+  }
+
+  useEffect(() => {
+    getToken();
+  }, []);
+
+  const reset = (name) => {
+    const resetAction = CommonActions.reset({
+      index: 0,
+      routes: [{ name }],
+    });
+    navigation.dispatch(resetAction);
+  };
 
   const register = async (username, selectOption) => {
     setIsLoading(true);
-
-    
   };
-
-
-
-
-
-  
 
   const login = async (username, password) => {
     setIsLoading(true);
-    
-    var obj = {
-      username: username,
-      password: password
-    }
-    const resp = await axios.post(`${BASE_URL}/login`, obj).then(async (res) => {
-      setToken(res.data.token)
-      if (res.data.status == 200) {
-        await AsyncStorage.setItem(
-          "token", res.data.token
-        );
-        console.warn('Login Successfully');
-        navigation.navigate('createProfile')
-      } else {
-        console.warn('Somthing Wrong');
-      }
-    })
+    const obj = {
+      username,
+      password,
+    };
+    await axios
+      .post(`${BASE_URL}/login`, obj)
+      .then(async (res) => {
+        console.log('Login Response: ', res);
+        setToken(res.data.token);
+        if (res.data.status === 200) {
+          await AsyncStorage.setItem('token', res.data.token);
+          setIsLoading(false);
+          reset('Home');
+        } else {
+          console.error('Somthing Wrong');
+          setIsLoading(false);
+        }
+      })
       .catch((err) => {
-        console.warn(err);
+        console.error('Login Error: ', err);
+        setIsLoading(false);
+        alert('Please enter correct credentials');
       });
   };
-
-
-  async function getToken() {
-    var tkn = await AsyncStorage.getItem(
-      "token"
-    );
-    setToken(tkn)
-  }
-
-
-  useEffect(() => {
-    getToken()
-  }, [])
-
 
   return (
     <AuthContext.Provider
       value={{
         isLoading,
-        userInfo,
-        splashLoading,
         register,
         login,
-        // logout,
         token,
-      }}>
+      }}
+    >
       {children}
     </AuthContext.Provider>
   );
-};
+}
