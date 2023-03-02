@@ -1,22 +1,24 @@
 import axios from 'axios';
 import React, { createContext, useEffect, useState } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import Toast from 'react-native-simple-toast';
 import { useNavigation, CommonActions } from '@react-navigation/native';
 import BASE_URL from '../config';
 
 export const AuthContext = createContext();
 
 export function AuthProvider({ children }) {
-  const [userInfo, setUserInfo] = useState({});
   const [isLoading, setIsLoading] = useState(false);
-  const [splashLoading, setSplashLoading] = useState(false);
   const [token, setToken] = useState();
+  const [user, setUser] = useState();
 
   const navigation = useNavigation();
 
   async function getToken() {
     const tkn = await AsyncStorage.getItem('token');
+    const usr = await AsyncStorage.getItem('user');
     setToken(tkn);
+    setUser(JSON.parse(usr));
   }
 
   useEffect(() => {
@@ -31,8 +33,43 @@ export function AuthProvider({ children }) {
     navigation.dispatch(resetAction);
   };
 
-  const register = async (username, selectOption) => {
+  const register = async (userEmail, selectOption) => {
+    let response;
     setIsLoading(true);
+    const obj = {
+      username: userEmail,
+      role: selectOption,
+    };
+    try {
+      response = await axios.post(`${BASE_URL}/user-auth/register`, obj);
+      Toast.showWithGravity('Please try again.', Toast.SHORT, Toast.TOP);
+      setIsLoading(false);
+    } catch (error) {
+      console.error(error);
+      Toast.showWithGravity('Something went wrong.', Toast.SHORT, Toast.TOP);
+      setIsLoading(false);
+    }
+    return response;
+  };
+
+  const setPassAndVerifyOtp = async (otp, id, password) => {
+    let response;
+    setIsLoading(true);
+    const obj = {
+      otp,
+      id,
+      password,
+    };
+    try {
+      response = await axios.post(`${BASE_URL}/user-auth/verify-otp`, obj);
+      Toast.showWithGravity('Please try again.', Toast.SHORT, Toast.TOP);
+      setIsLoading(false);
+    } catch (error) {
+      console.error(error);
+      Toast.showWithGravity('Something went wrong.', Toast.SHORT, Toast.TOP);
+      setIsLoading(false);
+    }
+    return response;
   };
 
   const login = async (username, password) => {
@@ -42,24 +79,56 @@ export function AuthProvider({ children }) {
       password,
     };
     await axios
-      .post(`${BASE_URL}/login`, obj)
+      .post(`${BASE_URL}/user-auth//login`, obj)
       .then(async (res) => {
-        console.log('Login Response: ', res);
-        setToken(res.data.token);
         if (res.data.status === 200) {
+          setToken(res.data.token);
           await AsyncStorage.setItem('token', res.data.token);
+          await AsyncStorage.setItem('user', JSON.stringify(res.data.user_details));
           setIsLoading(false);
+          Toast.showWithGravity('Logged in successfully.', Toast.SHORT, Toast.TOP);
           reset('Home');
         } else {
-          console.error('Somthing Wrong');
+          Toast.showWithGravity('Somthing went wrong.', Toast.SHORT, Toast.TOP);
           setIsLoading(false);
         }
       })
       .catch((err) => {
         console.error('Login Error: ', err);
         setIsLoading(false);
-        alert('Please enter correct credentials');
+        Toast.showWithGravity('Please enter correct credentials.', Toast.SHORT, Toast.TOP);
       });
+  };
+
+  const createProf = async (data) => {
+    let response;
+    setIsLoading(true);
+    // const obj = {
+    //   image: data.image,
+    //   name: data.name,
+    //   location: data.location,
+    //   genre: data.genre,
+    //   bio: data.bio,
+    //   user_id: user.id,
+    // };
+    const formData = new FormData();
+    formData.append('image', data.image);
+    formData.append('name', data.name);
+    formData.append('location', data.location);
+    formData.append('genre', data.genre);
+    formData.append('bio', data.bio);
+    formData.append('user_id', user.id);
+    console.log(formData);
+    try {
+      response = await axios.post(`${BASE_URL}/user-auth/update-profile`, formData);
+      Toast.showWithGravity('Please try again.', Toast.SHORT, Toast.TOP);
+      setIsLoading(false);
+    } catch (error) {
+      console.error(error);
+      Toast.showWithGravity('Something went wrong.', Toast.SHORT, Toast.TOP);
+      setIsLoading(false);
+    }
+    return response;
   };
 
   return (
@@ -68,7 +137,9 @@ export function AuthProvider({ children }) {
         isLoading,
         register,
         login,
+        setPassAndVerifyOtp,
         token,
+        createProf,
       }}
     >
       {children}

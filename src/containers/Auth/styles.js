@@ -5,8 +5,6 @@ import Normalize from '../../helpers/Dimens';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
-    width: '100%',
     backgroundColor: colors.white,
   },
   logo: {
@@ -22,9 +20,10 @@ const styles = StyleSheet.create({
     fontWeight: '400',
   },
   tabView: {
-    padding: Normalize(10),
+    flex: 1,
     backgroundColor: colors.white,
-    margin: Normalize(10),
+    marginHorizontal: Normalize(15),
+    justifyContent: 'center',
   },
   tabIndicator: {
     backgroundColor: colors.primary,

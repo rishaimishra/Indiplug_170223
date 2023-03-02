@@ -8,28 +8,25 @@ import {
   useWindowDimensions,
   TouchableOpacity,
 } from 'react-native';
-import { Button } from 'react-native-paper';
-import { color } from 'native-base/lib/typescript/theme/styled-system';
-import { TabView, SceneMap, TabBar, TabIndicator } from 'react-native-tab-view';
 import { useNavigation } from '@react-navigation/native';
-import CustomInput from '../../components/customInput/CustomInput';
-import CustomButton from '../../components/customButton/CustomButton';
-import MediaButton from '../../components/MediaButton';
-import Camera from '../../assests/camera.png';
-import Plug from '../../assests/plug.png';
-import Profile from '../../assests/prof_image.png';
-import RatingIcon from '../../assests/icons/rating.png';
-import CalendarIcon from '../../assests/icons/calendar.png';
-import ImageIcon from '../../assests/icons/ImageIcon.png';
-import MarketIcon from '../../assests/icons/market.png';
-import MusicIcon from '../../assests/icons/musicIcon.png';
-import UploadIcon from '../../assests/icons/uploadIcon.png';
+import CustomInput from '../../../components/customInput/CustomInput';
+import CustomButton from '../../../components/Ui/customButton';
+import MediaButton from '../../../components/MediaButton';
+import Camera from '../../../assests/images/camera.png';
+import Plug from '../../../assests/images/plug.png';
+import Profile from '../../../assests/images/prof_image.png';
+import RatingIcon from '../../../assests/icons/rating.png';
+import CalendarIcon from '../../../assests/icons/calendar.png';
+import ImageIcon from '../../../assests/icons/ImageIcon.png';
+import MarketIcon from '../../../assests/icons/market.png';
+import MusicIcon from '../../../assests/icons/musicIcon.png';
+import UploadIcon from '../../../assests/icons/uploadIcon.png';
 
-import GalleryRoute from '../../components/galleryIcon/GalleryIcon';
-import MusicRoute from '../../components/MusicIcon/MusicIcon';
-import CalendarRoute from '../../components/CalendarIcon/CalendarIcon';
+import GalleryRoute from '../../../components/galleryIcon/GalleryIcon';
+import MusicRoute from '../../../components/MusicIcon/MusicIcon';
+import CalendarRoute from '../../../components/CalendarIcon/CalendarIcon';
 
-// import { AuthContext } from '../../context/AuthContext';
+import { AuthContext } from '../../context/AuthContext';
 
 function MyProfile() {
   const [username, setUsername] = useState();
@@ -96,8 +93,17 @@ function MyProfile() {
   };
 
   return (
-    <ScrollView showsVerticalScrollIndicator={false}>
-      <View style={{ backgroundColor: '#fff', paddingTop: 25 }}>
+    <ScrollView
+      showsVerticalScrollIndicator={false}
+      contentContainerStyle={{ flex: 1, alignItems: 'center' }}
+    >
+      <View
+        style={{
+          backgroundColor: '#fff',
+          // flex: 1,
+          padding: 25,
+        }}
+      >
         <View onPress={() => console.log('Pressed')} style={styles.mediaButton}>
           <Image source={Profile} style={styles.mediaImage} />
           <Image source={Camera} style={styles.mediaCamera} />
@@ -201,7 +207,7 @@ function MyProfile() {
         </View>
 
         {/* {galleryShow ? <GalleryRoute /> : null}
-        {musicShow ? <MusicRoute /> : null} 
+        {musicShow ? <MusicRoute /> : null}
         {calendarShow ? <CalendarRoute /> : null} */}
 
         {/* <GalleryRoute /> */}
@@ -228,8 +234,9 @@ const styles = StyleSheet.create({
   },
   mediaButton: {
     height: 250,
-    width: 380,
-    marginLeft: 15,
+    // width: '100%',
+    // marginLeft: 15,
+    marginHorizontal: 15,
     borderRadius: 10,
     backgroundColor: '#EDEDED',
     position: 'relative',
@@ -259,7 +266,7 @@ const styles = StyleSheet.create({
   },
   mediaImage: {
     // position: 'absolute',
-    width: 380,
+    width: '100%',
     height: 250,
     margin: 'auto',
     borderRadius: 10,

@@ -11,6 +11,7 @@ const colors = {
   lightGrey: '#ccc',
   shade: '#F9FAFC',
   greyText: '#333',
+  greyText2: '#979797',
   facebook: '#4267B2',
   upload: '#C4F5F5',
   bgInput: '#EBEBEB',

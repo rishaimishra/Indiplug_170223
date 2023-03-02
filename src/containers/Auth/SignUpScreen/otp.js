@@ -3,47 +3,54 @@ import React, { useContext, useState } from 'react';
 import { View, Text, TextInput } from 'react-native';
 import Toast from 'react-native-simple-toast';
 import CustomButton from '../../../components/Ui/customButton';
-import SocialSignIn from '../../../components/Ui/socialSignInButtons';
 import { AuthContext } from '../../../context/AuthContext';
 import styles from './styles';
 
-function SignUpScreen({ category, handleSecondScreen }) {
-  const [username, setUsername] = useState('');
-  const { isLoading, register } = useContext(AuthContext);
+function OtpScreen({ user, handleThirdScreen }) {
+  const [password, setPassword] = useState();
+  const [otp, setOtp] = useState();
+  const { isLoading, setPassAndVerifyOtp } = useContext(AuthContext);
 
-  const isEmail = (email) => /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(email);
-
-  const handleSignUp = async () => {
-    if (!isEmail(username)) {
-      Toast.showWithGravity('Please enter a valid email.', Toast.SHORT, Toast.TOP);
+  const handleSetPassword = async () => {
+    if (!otp && !password) {
+      Toast.showWithGravity('Please enter all the values.', Toast.SHORT, Toast.TOP);
     } else {
-      const resp = await register(username, category);
+      const resp = await setPassAndVerifyOtp(otp, user.lastid, password);
       if (resp) {
-        Toast.showWithGravity('Please check your mail.', Toast.SHORT, Toast.TOP);
-        setUsername('');
-        handleSecondScreen(resp.data);
+        Toast.showWithGravity(resp.data.message, Toast.SHORT, Toast.TOP);
+        setOtp('');
+        setPassword('');
+        handleThirdScreen(resp.data);
       }
     }
   };
 
   return (
     <View style={styles.container}>
-      <Text style={styles.content}>
+      <Text style={styles.signUpContent}>
         Sign up to see photos, videos, events & podcasts from underground Artists & Venues.
       </Text>
 
       <View style={styles.inputContainer}>
         <TextInput
-          value={username}
-          onChangeText={(text) => setUsername(text)}
-          placeholder="Your Email"
+          value={otp}
+          onChangeText={(text) => setOtp(text)}
+          placeholder="Enter OTP"
+          style={styles.input}
+        />
+      </View>
+      <View style={styles.inputContainer}>
+        <TextInput
+          value={password}
+          onChangeText={(text) => setPassword(text)}
+          placeholder="Set Password"
           style={styles.input}
         />
       </View>
       <CustomButton
         style={styles.continueButton}
         text="Continue"
-        onPress={handleSignUp}
+        onPress={handleSetPassword}
         type="PRIMARY"
         isLoading={isLoading}
       />
@@ -52,12 +59,8 @@ function SignUpScreen({ category, handleSecondScreen }) {
         By signing up, you agree to our <Text style={styles.primaryText}>Terms, Data Policy</Text>,
         and <Text style={styles.primaryText}>Cookies Policy</Text>.
       </Text>
-      <View style={styles.socialContainer}>
-        <Text style={styles.OrStyle}>or Sign up with</Text>
-        <SocialSignIn />
-      </View>
     </View>
   );
 }
 
-export default SignUpScreen;
+export default OtpScreen;

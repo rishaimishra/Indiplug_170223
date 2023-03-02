@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import { View, Text, TextInput } from 'react-native';
-// import Toast from 'react-native-simple-toast';
+import Toast from 'react-native-simple-toast';
 import CustomButton from '../../../components/Ui/customButton';
 import SocialSignIn from '../../../components/Ui/socialSignInButtons';
 
@@ -11,20 +11,22 @@ import styles from './styles';
 function SignInScreen() {
   const [userEmail, setUserEmail] = useState();
   const [password, setPassword] = useState();
-  const [isLoading, setIsLoading] = useState(false);
+  // const [isLoading, setIsLoading] = useState(false);
 
-  const { login } = useContext(AuthContext);
+  const isEmail = (email) => /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(email);
+
+  const { isLoading, login } = useContext(AuthContext);
 
   const handleSignIn = async () => {
     // Toast.show('Please enter your email');
-    if (!userEmail) {
-      alert('Please enter your email');
+    if (!isEmail(userEmail)) {
+      Toast.showWithGravity('Please enter a valid email.', Toast.SHORT, Toast.TOP);
     } else if (!password) {
-      alert('Please enter your password');
+      Toast.showWithGravity('Please enter your password.', Toast.SHORT, Toast.TOP);
     } else {
-      setIsLoading(true);
+      // setIsLoading(true);
       await login(userEmail, password);
-      setIsLoading(false);
+      // setIsLoading(false);
     }
   };
 

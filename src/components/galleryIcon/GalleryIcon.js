@@ -1,4 +1,4 @@
-import React, {useContext, useState} from 'react';
+import React, { useContext, useState } from 'react';
 import {
   View,
   Text,
@@ -8,15 +8,15 @@ import {
   useWindowDimensions,
   TouchableOpacity,
 } from 'react-native';
-import Post from '../../assests/post.png';
+import Post from '../../assests/images/post.png';
 
 // import { useNavigation } from '@react-navigation/native';
 // import { AuthContext } from '../../context/AuthContext';
 
-const GalleryIcon = () => {
+function GalleryIcon() {
   const [username, setUsername] = useState();
   const [display, setDisplay] = useState(true);
-  const {height} = useWindowDimensions();
+  const { height } = useWindowDimensions();
   // const navigation = useNavigation();
   // const {isLoading, login} = useContext(AuthContext);
 
@@ -25,7 +25,7 @@ const GalleryIcon = () => {
     console.warn('sign in press');
     // login(username, password);
 
-    //validate user
+    // validate user
     // navigation.navigate('Home');
   };
 
@@ -41,7 +41,8 @@ const GalleryIcon = () => {
           paddingLeft: 25,
           paddingRight: 25,
           marginHorizontal: 'auto',
-        }}>
+        }}
+      >
         <View>
           <Image source={Post} style={styles.PostStyle} />
         </View>
@@ -59,7 +60,7 @@ const GalleryIcon = () => {
       </View>
     </>
   );
-};
+}
 
 const styles = StyleSheet.create({
   root: {

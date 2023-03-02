@@ -4,7 +4,7 @@ import colors from '../../../constants/colors';
 import Normalize from '../../../helpers/Dimens';
 
 // eslint-disable-next-line react/prop-types
-function CustomButton({ onPress, text, type, bgColor, fgColor, isLoading }) {
+function CustomButton({ onPress, text, type, bgColor, fgColor, isLoading, style }) {
   return (
     <Pressable
       onPress={onPress}
@@ -13,6 +13,7 @@ function CustomButton({ onPress, text, type, bgColor, fgColor, isLoading }) {
         styles.container,
         styles[`container_${type}`],
         bgColor ? { backgroundColor: bgColor } : {},
+        style,
       ]}
     >
       {isLoading ? (
@@ -29,7 +30,7 @@ function CustomButton({ onPress, text, type, bgColor, fgColor, isLoading }) {
 const styles = StyleSheet.create({
   container: {
     width: '100%',
-    padding: Normalize(14),
+    padding: Normalize(12),
     marginVertical: Normalize(5),
     alignItems: 'center',
     borderRadius: Normalize(8),
@@ -47,12 +48,18 @@ const styles = StyleSheet.create({
     marginLeft: '15%',
   },
   container_TERTIARY: {},
+  container_CANCEL: {
+    backgroundColor: colors.bgInput,
+  },
   text: {
     fontWeight: 'bold',
     color: colors.white,
     fontSize: Normalize(14),
   },
   text_TERTIARY: {
+    color: colors.grey,
+  },
+  text_CANCEL: {
     color: colors.grey,
   },
   text_SECONDARY: {

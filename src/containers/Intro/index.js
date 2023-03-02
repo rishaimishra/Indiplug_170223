@@ -1,16 +1,20 @@
 import { View, StyleSheet, Image, StatusBar } from 'react-native';
 import React, { useEffect } from 'react';
 import { CommonActions } from '@react-navigation/native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 // assets
 import colors from '../../constants/colors';
 import images from '../../constants/images';
 
 function WelcomeScreen({ navigation }) {
-  useEffect(() => {
-    setTimeout(() => {
+  async function initialize() {
+    const tkn = await AsyncStorage.getItem('token');
+    if (tkn) {
+      reset('Home');
+    } else {
       reset('Auth');
-    }, 3000);
-  });
+    }
+  }
 
   const reset = (name) => {
     const resetAction = CommonActions.reset({
@@ -19,6 +23,11 @@ function WelcomeScreen({ navigation }) {
     });
     navigation.dispatch(resetAction);
   };
+  useEffect(() => {
+    setTimeout(() => {
+      initialize();
+    }, 3000);
+  });
 
   return (
     <>

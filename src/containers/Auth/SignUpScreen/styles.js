@@ -5,11 +5,13 @@ import Normalize from '../../../helpers/Dimens';
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
     width: '100%',
     marginTop: Normalize(10),
   },
-  OrStyle: {
+  radioContainer: {
+    marginVertical: Normalize(30),
+  },
+  content: {
     fontSize: Normalize(14),
     color: colors.greyText2,
     marginVertical: Normalize(10),
@@ -21,7 +23,27 @@ const styles = StyleSheet.create({
     borderWidth: Normalize(1),
     borderRadius: Normalize(8),
     paddingHorizontal: Normalize(10),
-    marginTop: Normalize(10),
+    marginVertical: Normalize(10),
+  },
+  continueButton: {
+    marginVertical: Normalize(10),
+  },
+  OrStyle: {
+    fontSize: Normalize(14),
+    color: colors.greyText2,
+    marginVertical: Normalize(10),
+  },
+  titleText: {
+    fontSize: 41,
+    color: '#000',
+    marginTop: 20,
+    fontWeight: '400',
+  },
+  socialContainer: {
+    alignItems: 'center',
+  },
+  primaryText: {
+    color: colors.primary,
   },
 });
 
