@@ -1,36 +1,36 @@
-import { View, Text, TextInput, StyleSheet } from 'react-native'
-import React from 'react'
+import { View, TextInput, StyleSheet } from 'react-native';
+import React from 'react';
+import Normalize from '../../helpers/Dimens';
+import colors from '../../constants/colors';
 
-const CustomInput = ({value, setValue, placeholder, secureTextEntry}) => {
+function CustomInput({ value, setValue, placeholder, secureTextEntry }) {
   return (
     <View style={styles.container}>
-        <TextInput 
-            value={value}
-            onChangeText={setValue}
-            placeholder={placeholder}
-            style={styles.input} 
-            secureTextEntry={secureTextEntry}
-             />
+      <TextInput
+        value={value}
+        onChangeText={setValue}
+        placeholder={placeholder}
+        style={styles.input}
+        secureTextEntry={secureTextEntry}
+      />
     </View>
-  )
+  );
 }
 
 const styles = StyleSheet.create({
-    container:{
-        backgroundColor: '#EBEBEB',
-        width: '100%',
+  container: {
+    backgroundColor: colors.bgInput,
+    width: '100%',
 
-        borderColor: '#e8e8e8',
-        borderWidth: 1,
-        borderRadius: 5,
+    borderColor: colors.bgInput,
+    borderWidth: 1,
+    borderRadius: Normalize(8),
 
-        paddingHorizontal: 10,
-        marginVertical: 5,
-        marginTop: 20     
-    },
-    input: {
-
-    },
-})
+    paddingHorizontal: Normalize(10),
+    marginVertical: Normalize(5),
+    marginTop: Normalize(12),
+  },
+  input: {},
+});
 
 export default CustomInput;

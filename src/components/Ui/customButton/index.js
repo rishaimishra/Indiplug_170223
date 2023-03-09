@@ -45,7 +45,6 @@ const styles = StyleSheet.create({
   container_UPLOAD: {
     backgroundColor: colors.upload,
     width: '70%',
-    marginLeft: '15%',
   },
   container_TERTIARY: {},
   container_CANCEL: {

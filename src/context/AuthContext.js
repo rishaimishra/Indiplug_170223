@@ -79,8 +79,9 @@ export function AuthProvider({ children }) {
       password,
     };
     await axios
-      .post(`${BASE_URL}/user-auth//login`, obj)
+      .post(`${BASE_URL}/user-auth/login`, obj)
       .then(async (res) => {
+        console.log('res', res);
         if (res.data.status === 200) {
           setToken(res.data.token);
           await AsyncStorage.setItem('token', res.data.token);
@@ -103,25 +104,46 @@ export function AuthProvider({ children }) {
   const createProf = async (data) => {
     let response;
     setIsLoading(true);
-    // const obj = {
-    //   image: data.image,
-    //   name: data.name,
-    //   location: data.location,
-    //   genre: data.genre,
-    //   bio: data.bio,
-    //   user_id: user.id,
-    // };
+
     const formData = new FormData();
-    formData.append('image', data.image);
+    // formData.append('image', data.image);
     formData.append('name', data.name);
     formData.append('location', data.location);
     formData.append('genre', data.genre);
     formData.append('bio', data.bio);
     formData.append('user_id', user.id);
-    console.log(formData);
+
     try {
-      response = await axios.post(`${BASE_URL}/user-auth/update-profile`, formData);
-      Toast.showWithGravity('Please try again.', Toast.SHORT, Toast.TOP);
+      response = await axios.post(`${BASE_URL}/user-auth/update-profile`, formData, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          'auth-token': token,
+        },
+      });
+      if (response.data.status === '200') {
+        Toast.showWithGravity(response.data.message, Toast.SHORT, Toast.TOP);
+      } else {
+        Toast.showWithGravity('Please try again.', Toast.SHORT, Toast.TOP);
+      }
+      setIsLoading(false);
+    } catch (error) {
+      console.error(error);
+      Toast.showWithGravity('Something went wrong.', Toast.SHORT, Toast.TOP);
+      setIsLoading(false);
+    }
+    return response;
+  };
+  const fetchProfileDetails = async () => {
+    let response;
+    setIsLoading(true);
+
+    try {
+      response = await axios.get(`${BASE_URL}/user-auth/user-details`, {
+        headers: {
+          'Content-Type': 'multipart/form-data',
+          'auth-token': token,
+        },
+      });
       setIsLoading(false);
     } catch (error) {
       console.error(error);
@@ -140,6 +162,7 @@ export function AuthProvider({ children }) {
         setPassAndVerifyOtp,
         token,
         createProf,
+        fetchProfileDetails,
       }}
     >
       {children}

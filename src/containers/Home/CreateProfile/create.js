@@ -32,22 +32,22 @@ function CreateProfile({ navigation }) {
 
   const handlePress = async () => {
     const body = {
-      image: userImage,
+      image: userImage.replace('file:///', ''),
       name: username,
       location,
       genre,
       bio,
     };
     const { data } = await createProf(body);
-    console.log('data', data);
-    // navigation.navigate('myprofiles');
+
+    if (data.status === '200') navigation.navigate('Profile');
   };
 
   const onUpload = () => {
     setModalShow(false);
   };
 
-  const countries = ['Action', 'Photography', 'Comedy', 'Painting'];
+  const genres = ['Action', 'Photography', 'Comedy', 'Painting'];
 
   return (
     <ScrollView
@@ -72,9 +72,10 @@ function CreateProfile({ navigation }) {
         <CustomInput placeholder="Your name" value={username} setValue={setUsername} />
         <CustomInput placeholder="Your Location*" value={location} setValue={setLocation} />
         <SelectDropdown
-          data={countries}
-          buttonStyle={{ width: '100%', marginTop: 15 }}
-          buttonTextStyle={{ textAlign: 'left' }}
+          data={genres}
+          defaultButtonText="Genre* (Select max 3)"
+          buttonStyle={styles.selectBtnStyle}
+          buttonTextStyle={styles.buttonTextStyle}
           onSelect={(selectedItem, index) => {
             setGenre(selectedItem);
           }}

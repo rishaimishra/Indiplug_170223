@@ -4,7 +4,7 @@ import Normalize from '../../../helpers/Dimens';
 
 const styles = StyleSheet.create({
   root: {
-    flex: 1,
+    flexGrow: 1,
     padding: Normalize(15),
     backgroundColor: colors.white,
   },
@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   mediaButton: {
-    height: '40%',
+    height: Normalize(200),
     width: '100%',
     borderRadius: Normalize(8),
     backgroundColor: colors.bgInput,
@@ -38,6 +38,15 @@ const styles = StyleSheet.create({
     top: 'auto',
     right: 20,
     bottom: 20,
+  },
+  selectBtnStyle: {
+    width: '100%',
+    marginTop: 15,
+    borderRadius: Normalize(8),
+  },
+  buttonTextStyle: {
+    textAlign: 'left',
+    color: colors.greyText2,
   },
   footrButtonCancel: {
     paddingTop: 10,
