@@ -6,9 +6,10 @@ import SelectDropdown from 'react-native-select-dropdown';
 import CustomInput from '../../../components/customInput/CustomInput';
 import styles from './styles';
 import images from '../../../constants/images';
-import CameraModal from '../../../components/Ui/cameraMoal';
+import CameraModal from '../../../components/cameraMoal';
 import { AuthContext } from '../../../context/AuthContext';
 import CustomButton from '../../../components/Ui/customButton';
+import Header from '../../../components/Shared/Header';
 
 function CreateProfile({ navigation }) {
   const [username, setUsername] = useState();
@@ -40,7 +41,7 @@ function CreateProfile({ navigation }) {
     };
     const { data } = await createProf(body);
 
-    if (data.status === '200') navigation.navigate('Profile');
+    if (data.status === '200') navigation.navigate('BottomNav');
   };
 
   const onUpload = () => {
@@ -50,61 +51,64 @@ function CreateProfile({ navigation }) {
   const genres = ['Action', 'Photography', 'Comedy', 'Painting'];
 
   return (
-    <ScrollView
-      showsVerticalScrollIndicator={false}
-      contentContainerStyle={styles.root}
-      keyboardShouldPersistTaps="handled"
-    >
-      <View style={styles.container}>
-        <TouchableOpacity onPress={() => setModalShow(true)} style={styles.mediaButton}>
-          <Image
-            source={userImage ? { uri: userImage } : images.Plug}
-            style={userImage ? styles.mediaPlug2 : styles.mediaPlug}
+    <>
+      <Header nav={navigation} menu title="Create Profile" />
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        contentContainerStyle={styles.root}
+        keyboardShouldPersistTaps="handled"
+      >
+        <View style={styles.container}>
+          <TouchableOpacity onPress={() => setModalShow(true)} style={styles.mediaButton}>
+            <Image
+              source={userImage ? { uri: userImage } : images.Plug}
+              style={userImage ? styles.mediaPlug2 : styles.mediaPlug}
+            />
+            <Image source={images.Camera} style={styles.mediaCamera} />
+          </TouchableOpacity>
+          <CameraModal
+            modalShow={modalShow}
+            handleUpload={onUpload}
+            handleImageChange={(image) => setUserImage(image)}
           />
-          <Image source={images.Camera} style={styles.mediaCamera} />
-        </TouchableOpacity>
-        <CameraModal
-          modalShow={modalShow}
-          handleUpload={onUpload}
-          handleImageChange={(image) => setUserImage(image)}
-        />
 
-        <CustomInput placeholder="Your name" value={username} setValue={setUsername} />
-        <CustomInput placeholder="Your Location*" value={location} setValue={setLocation} />
-        <SelectDropdown
-          data={genres}
-          defaultButtonText="Genre* (Select max 3)"
-          buttonStyle={styles.selectBtnStyle}
-          buttonTextStyle={styles.buttonTextStyle}
-          onSelect={(selectedItem, index) => {
-            setGenre(selectedItem);
-          }}
-        />
-        <CustomInput placeholder="Bio" value={bio} setValue={setBio} />
-        <View
-          style={{
-            flexDirection: 'row',
-            flexWrap: 'wrap',
-            justifyContent: 'space-between',
-          }}
-        >
-          <CustomButton
-            style={styles.footrButtonCancel}
-            text="Cancel"
-            type="CANCEL"
-            onPress={() => navigation.navigate('Profile')}
-            isLoading={false}
+          <CustomInput placeholder="Your name" value={username} setValue={setUsername} />
+          <CustomInput placeholder="Your Location*" value={location} setValue={setLocation} />
+          <SelectDropdown
+            data={genres}
+            defaultButtonText="Genre* (Select max 3)"
+            buttonStyle={styles.selectBtnStyle}
+            buttonTextStyle={styles.buttonTextStyle}
+            onSelect={(selectedItem, index) => {
+              setGenre(selectedItem);
+            }}
           />
-          <CustomButton
-            style={styles.footrButtonCancel}
-            text="Save"
-            type="PRIMARY"
-            onPress={handlePress}
-            isLoading={isLoading}
-          />
+          <CustomInput placeholder="Bio" value={bio} setValue={setBio} />
+          <View
+            style={{
+              flexDirection: 'row',
+              flexWrap: 'wrap',
+              justifyContent: 'space-between',
+            }}
+          >
+            <CustomButton
+              style={styles.footrButtonCancel}
+              text="Cancel"
+              type="CANCEL"
+              onPress={() => navigation.navigate('BottomNav')}
+              isLoading={false}
+            />
+            <CustomButton
+              style={styles.footrButtonCancel}
+              text="Save"
+              type="PRIMARY"
+              onPress={handlePress}
+              isLoading={isLoading}
+            />
+          </View>
         </View>
-      </View>
-    </ScrollView>
+      </ScrollView>
+    </>
   );
 }
 

@@ -25,6 +25,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: Normalize(10),
     marginVertical: Normalize(10),
   },
+  input: {
+    color: colors.greyText,
+  },
   continueButton: {
     marginVertical: Normalize(10),
   },

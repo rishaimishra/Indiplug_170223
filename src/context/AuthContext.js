@@ -133,6 +133,7 @@ export function AuthProvider({ children }) {
     }
     return response;
   };
+
   const fetchProfileDetails = async () => {
     let response;
     setIsLoading(true);
@@ -153,6 +154,13 @@ export function AuthProvider({ children }) {
     return response;
   };
 
+  const logout = async () => {
+    console.log('logout');
+    await AsyncStorage.removeItem('token');
+    await AsyncStorage.removeItem('user');
+    navigation.navigate('Splash');
+  };
+
   return (
     <AuthContext.Provider
       value={{
@@ -163,6 +171,7 @@ export function AuthProvider({ children }) {
         token,
         createProf,
         fetchProfileDetails,
+        logout,
       }}
     >
       {children}

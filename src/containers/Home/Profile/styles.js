@@ -124,16 +124,17 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
   },
-  uploadContainer: {
-    alignItems: 'center',
-    marginVertical: Normalize(10),
+  tabIcon: {
+    backgroundColor: colors.bgLightBlue,
+    padding: Normalize(8),
+    borderRadius: 100,
+    borderWidth: 1,
+    borderColor: colors.borderLightGreen,
   },
-  networkCloud: {
-    marginBottom: Normalize(5),
-  },
-  cloudText: {
-    marginBottom: Normalize(5),
-    color: colors.greyText2,
+  tabIconActive: {
+    backgroundColor: colors.primary,
+    borderWidth: 1,
+    borderColor: colors.primary,
   },
 });
 

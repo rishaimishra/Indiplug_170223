@@ -10,10 +10,10 @@ import {
   Dimensions,
 } from 'react-native';
 import { launchCamera, launchImageLibrary } from 'react-native-image-picker';
-import colors from '../../constants/colors';
-import Normalize from '../../helpers/Dimens';
-import CustomButton from './customButton';
-import images from '../../constants/images';
+import colors from '../constants/colors';
+import Normalize from '../helpers/Dimens';
+import CustomButton from './Ui/customButton';
+import images from '../constants/images';
 
 const { height } = Dimensions.get('window');
 

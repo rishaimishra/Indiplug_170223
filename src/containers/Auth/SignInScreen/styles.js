@@ -23,6 +23,9 @@ const styles = StyleSheet.create({
     paddingHorizontal: Normalize(10),
     marginTop: Normalize(10),
   },
+  input: {
+    color: colors.greyText,
+  },
 });
 
 export default styles;

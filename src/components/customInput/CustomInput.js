@@ -30,7 +30,9 @@ const styles = StyleSheet.create({
     marginVertical: Normalize(5),
     marginTop: Normalize(12),
   },
-  input: {},
+  input: {
+    color: colors.greyText,
+  },
 });
 
 export default CustomInput;

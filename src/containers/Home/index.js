@@ -1,10 +1,10 @@
 import React from 'react';
-import { StatusBar, StyleSheet } from 'react-native';
+import { StatusBar } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import CustomDrawer from './CustomDrawer';
-
+// Screens
 import CreateProfile from './CreateProfile';
-import Profile from './Profile';
+import BottomNav from './BottomNavHome';
 
 import colors from '../../constants/colors';
 
@@ -16,29 +16,16 @@ export default function Home() {
       <StatusBar backgroundColor={colors.white} />
       <Drawer.Navigator
         drawerContent={(props) => <CustomDrawer {...props} />}
-        style={styles.drawerSection}
         screenOptions={{
           drawerStyle: {
             backgroundColor: colors.primary,
-            width: '90%',
+            width: '80%',
           },
         }}
       >
-        <Drawer.Screen name="Create" component={CreateProfile} />
-        <Drawer.Screen name="Profile" component={Profile} />
+        <Drawer.Screen name="Create" component={CreateProfile} options={{ headerShown: false }} />
+        <Drawer.Screen name="BottomNav" component={BottomNav} options={{ headerShown: false }} />
       </Drawer.Navigator>
     </>
   );
 }
-
-const styles = StyleSheet.create({
-  root: {
-    alignItems: 'center',
-    padding: 20,
-  },
-  drawerSection: {
-    backgroundColor: 'red',
-    paddingTop: 500,
-    width: '100%',
-  },
-});

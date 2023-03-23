@@ -15,6 +15,8 @@ const colors = {
   facebook: '#4267B2',
   upload: '#C4F5F5',
   bgInput: '#EBEBEB',
+  bgLightBlue: '#DEFFFC',
+  borderLightGreen: '#C6F5F5',
 };
 
 export default colors;
