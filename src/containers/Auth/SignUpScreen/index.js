@@ -5,7 +5,7 @@ import styles from './styles';
 
 // Screens
 import IAmScreen from './iAM';
-import SignUp from './signUpScreen';
+import SignUp from './SignUpScreen';
 import OtpScreen from './otp';
 
 function SignUpContainer() {

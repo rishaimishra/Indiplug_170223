@@ -1,0 +1,47 @@
+com.indiplugproject.app-jetified-annotation-experimental-1.1.0-0 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\0b63b8ab3ed7a114163be33d002d6256\transformed\jetified-annotation-experimental-1.1.0\res
+com.indiplugproject.app-jetified-flipper-0.125.0-1 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\0e74702930d716cb5e75b51ab0da89c8\transformed\jetified-flipper-0.125.0\res
+com.indiplugproject.app-jetified-viewpager2-1.0.0-2 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\1257e60406d04597b2ce60aa0f4650c8\transformed\jetified-viewpager2-1.0.0\res
+com.indiplugproject.app-jetified-drawee-2.6.0-3 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\1c2bae020326c015dc485008a9f0ea9c\transformed\jetified-drawee-2.6.0\res
+com.indiplugproject.app-jetified-lifecycle-process-2.4.0-4 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\1d3dddd5e718ac51f7a049d4cf4803c9\transformed\jetified-lifecycle-process-2.4.0\res
+com.indiplugproject.app-jetified-autofill-1.1.0-5 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\214283f59a314e86e70211e62cf9b05d\transformed\jetified-autofill-1.1.0\res
+com.indiplugproject.app-jetified-play-services-auth-19.2.0-6 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\2ddcc423b8459ba346fffeeeed6c0776\transformed\jetified-play-services-auth-19.2.0\res
+com.indiplugproject.app-material-1.1.0-7 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\2e1e44276689044b6f6a487df02a7204\transformed\material-1.1.0\res
+com.indiplugproject.app-jetified-appcompat-resources-1.4.1-8 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\40a022348784fc43f2d69b474c959659\transformed\jetified-appcompat-resources-1.4.1\res
+com.indiplugproject.app-jetified-play-services-base-17.5.0-9 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\4aec603605bf84ea85c6678a07304609\transformed\jetified-play-services-base-17.5.0\res
+com.indiplugproject.app-jetified-startup-runtime-1.0.0-10 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\78abff1acc2da9446b44b3e91946ec0d\transformed\jetified-startup-runtime-1.0.0\res
+com.indiplugproject.app-cardview-1.0.0-11 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\7a5a6777a5be573d4767610129884a00\transformed\cardview-1.0.0\res
+com.indiplugproject.app-lifecycle-viewmodel-2.3.1-12 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\859743d30d4314adcb33527189feca11\transformed\lifecycle-viewmodel-2.3.1\res
+com.indiplugproject.app-recyclerview-1.1.0-13 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\8acb120a07b34ae4b96f2cf4007c22d3\transformed\recyclerview-1.1.0\res
+com.indiplugproject.app-jetified-emoji2-1.0.0-14 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\9531807b45c64822248029ffb45028a5\transformed\jetified-emoji2-1.0.0\res
+com.indiplugproject.app-coordinatorlayout-1.1.0-15 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\9acf1e21770c9d46dce24942ef783965\transformed\coordinatorlayout-1.1.0\res
+com.indiplugproject.app-appcompat-1.4.1-16 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\b5336aab3164f9d2cf9c9adeeae09cbf\transformed\appcompat-1.4.1\res
+com.indiplugproject.app-lifecycle-runtime-2.4.0-17 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\c7ab74f5e1256e7abe2c484a119458f3\transformed\lifecycle-runtime-2.4.0\res
+com.indiplugproject.app-fragment-1.3.6-18 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\dbdba4628cc562f6d0a724f20a5277ef\transformed\fragment-1.3.6\res
+com.indiplugproject.app-jetified-emoji2-views-helper-1.0.0-19 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\e2310b9b5f0acc062ac80c2ce175f472\transformed\jetified-emoji2-views-helper-1.0.0\res
+com.indiplugproject.app-jetified-core-ktx-1.6.0-20 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\e2f4760d164191f8afedc986145ca254\transformed\jetified-core-ktx-1.6.0\res
+com.indiplugproject.app-transition-1.2.0-21 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\f37b92cb566df6e79d0e7aa87b3ef6e4\transformed\transition-1.2.0\res
+com.indiplugproject.app-jetified-savedstate-1.1.0-22 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\f380c771838dbf7629addb4572b03058\transformed\jetified-savedstate-1.1.0\res
+com.indiplugproject.app-jetified-react-native-0.70.4-debug-23 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\f44c1d1d06aece1b598abd59f5d683fd\transformed\jetified-react-native-0.70.4-debug\res
+com.indiplugproject.app-core-1.7.0-24 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\f564a7f47041496c236a7900afb913c5\transformed\core-1.7.0\res
+com.indiplugproject.app-jetified-play-services-basement-17.5.0-25 C:\Users\Supriya Gorai\.gradle\caches\transforms-3\fc0dbfc9aee02315cfa9023b1883934c\transformed\jetified-play-services-basement-17.5.0\res
+com.indiplugproject.app-google-services-26 E:\Self\Projects\INDIPLUG\Indiplug_170223\android\app\build\generated\res\google-services\debug
+com.indiplugproject.app-pngs-27 E:\Self\Projects\INDIPLUG\Indiplug_170223\android\app\build\generated\res\pngs\debug
+com.indiplugproject.app-react-28 E:\Self\Projects\INDIPLUG\Indiplug_170223\android\app\build\generated\res\react\debug
+com.indiplugproject.app-resValues-29 E:\Self\Projects\INDIPLUG\Indiplug_170223\android\app\build\generated\res\resValues\debug
+com.indiplugproject.app-rs-30 E:\Self\Projects\INDIPLUG\Indiplug_170223\android\app\build\generated\res\rs\debug
+com.indiplugproject.app-mergeDebugResources-31 E:\Self\Projects\INDIPLUG\Indiplug_170223\android\app\build\intermediates\incremental\debug\mergeDebugResources\merged.dir
+com.indiplugproject.app-mergeDebugResources-32 E:\Self\Projects\INDIPLUG\Indiplug_170223\android\app\build\intermediates\incremental\debug\mergeDebugResources\stripped.dir
+com.indiplugproject.app-merged_res-33 E:\Self\Projects\INDIPLUG\Indiplug_170223\android\app\build\intermediates\merged_res\debug
+com.indiplugproject.app-debug-34 E:\Self\Projects\INDIPLUG\Indiplug_170223\android\app\src\debug\res
+com.indiplugproject.app-main-35 E:\Self\Projects\INDIPLUG\Indiplug_170223\android\app\src\main\res
+com.indiplugproject.app-packaged_res-36 E:\Self\Projects\INDIPLUG\Indiplug_170223\node_modules\@react-native-async-storage\async-storage\android\build\intermediates\packaged_res\debug
+com.indiplugproject.app-packaged_res-37 E:\Self\Projects\INDIPLUG\Indiplug_170223\node_modules\@react-native-google-signin\google-signin\android\build\intermediates\packaged_res\debug
+com.indiplugproject.app-packaged_res-38 E:\Self\Projects\INDIPLUG\Indiplug_170223\node_modules\react-native-document-picker\android\build\intermediates\packaged_res\debug
+com.indiplugproject.app-packaged_res-39 E:\Self\Projects\INDIPLUG\Indiplug_170223\node_modules\react-native-gesture-handler\android\build\intermediates\packaged_res\debug
+com.indiplugproject.app-packaged_res-40 E:\Self\Projects\INDIPLUG\Indiplug_170223\node_modules\react-native-image-picker\android\build\intermediates\packaged_res\debug
+com.indiplugproject.app-packaged_res-41 E:\Self\Projects\INDIPLUG\Indiplug_170223\node_modules\react-native-pager-view\android\build\intermediates\packaged_res\debug
+com.indiplugproject.app-packaged_res-42 E:\Self\Projects\INDIPLUG\Indiplug_170223\node_modules\react-native-safe-area-context\android\build\intermediates\packaged_res\debug
+com.indiplugproject.app-packaged_res-43 E:\Self\Projects\INDIPLUG\Indiplug_170223\node_modules\react-native-screens\android\build\intermediates\packaged_res\debug
+com.indiplugproject.app-packaged_res-44 E:\Self\Projects\INDIPLUG\Indiplug_170223\node_modules\react-native-sound\android\build\intermediates\packaged_res\debug
+com.indiplugproject.app-packaged_res-45 E:\Self\Projects\INDIPLUG\Indiplug_170223\node_modules\react-native-svg\android\build\intermediates\packaged_res\debug
+com.indiplugproject.app-packaged_res-46 E:\Self\Projects\INDIPLUG\Indiplug_170223\node_modules\react-native-vector-icons\android\build\intermediates\packaged_res\debug
