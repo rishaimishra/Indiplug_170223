@@ -1,0 +1,338 @@
+[
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_images_post.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_images_post.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-xxhdpi_node_modules_reactnativecalendars_src_img_up.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-xxhdpi/node_modules_reactnativecalendars_src_img_up.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-xxxhdpi_node_modules_reactnativecalendars_src_calendar_img_previous.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-xxxhdpi/node_modules_reactnativecalendars_src_calendar_img_previous.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-xhdpi_node_modules_reactnavigation_drawer_src_views_assets_toggledrawericon.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-xhdpi/node_modules_reactnavigation_drawer_src_views_assets_toggledrawericon.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_node_modules_reactnativecalendars_src_img_down.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/node_modules_reactnativecalendars_src_img_down.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_node_modules_reactnavigation_elements_src_assets_backiconmask.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/node_modules_reactnavigation_elements_src_assets_backiconmask.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-xxxhdpi_node_modules_reactnavigation_drawer_src_views_assets_toggledrawericon.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-xxxhdpi/node_modules_reactnavigation_drawer_src_views_assets_toggledrawericon.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-hdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-hdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_musicicon.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_musicicon.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-xxxhdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-xxxhdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_images_logo.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_images_logo.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-xxhdpi_node_modules_reactnativecalendars_src_img_down.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-xxhdpi/node_modules_reactnativecalendars_src_img_down.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_gallerywhite.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_gallerywhite.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_arrowleft.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_arrowleft.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_headphone.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_headphone.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-xhdpi_node_modules_reactnativecalendars_src_calendar_img_previous.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-xhdpi/node_modules_reactnativecalendars_src_calendar_img_previous.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.indiplugproject.app-main-33:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_gallery.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_gallery.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_event.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_event.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_images_camera.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_images_camera.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_profileactive.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_profileactive.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_home.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_home.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-hdpi_node_modules_reactnavigation_drawer_src_views_assets_toggledrawericon.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-hdpi/node_modules_reactnavigation_drawer_src_views_assets_toggledrawericon.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_images_google.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_images_google.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_node_modules_reactnavigation_bottomtabs_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/node_modules_reactnavigation_bottomtabs_node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-xxxhdpi_node_modules_reactnativecalendars_src_img_up.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-xxxhdpi/node_modules_reactnativecalendars_src_img_up.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.indiplugproject.app-main-33:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-xxhdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-xxhdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_images_logowhite.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_images_logowhite.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_sound.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_sound.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-xxhdpi_node_modules_reactnativecalendars_src_calendar_img_previous.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-xxhdpi/node_modules_reactnativecalendars_src_calendar_img_previous.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_uploadicon.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_uploadicon.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_music3.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_music3.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-xxhdpi_node_modules_reactnavigation_drawer_src_views_assets_toggledrawericon.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-xxhdpi/node_modules_reactnavigation_drawer_src_views_assets_toggledrawericon.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-xhdpi_node_modules_reactnativecalendars_src_calendar_img_next.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-xhdpi/node_modules_reactnativecalendars_src_calendar_img_next.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_menu.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_menu.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_pmusic.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_pmusic.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_pause.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_pause.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_images_plug.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_images_plug.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_images_musicicon.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_images_musicicon.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable_rn_edit_text_material.xml.flat",
+        "source": "com.indiplugproject.app-main-33:/drawable/rn_edit_text_material.xml"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_locationgreen.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_locationgreen.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_images_eventbanner.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_images_eventbanner.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-hdpi_node_modules_reactnativecalendars_src_img_down.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-hdpi/node_modules_reactnativecalendars_src_img_down.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_musicwhite.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_musicwhite.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.indiplugproject.app-main-33:/mipmap-mdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_node_modules_reactnativepaper_src_assets_backchevron.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/node_modules_reactnativepaper_src_assets_backchevron.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.indiplugproject.app-main-33:/mipmap-xxxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_music2.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_music2.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-xhdpi_node_modules_reactnavigation_bottomtabs_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-xhdpi/node_modules_reactnavigation_bottomtabs_node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-xxxhdpi_node_modules_reactnativecalendars_src_img_down.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-xxxhdpi/node_modules_reactnativecalendars_src_img_down.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_eventwhite.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_eventwhite.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_imageicon.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_imageicon.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_market.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_market.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-xhdpi_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-xhdpi/node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-xhdpi_node_modules_reactnativecalendars_src_img_up.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-xhdpi/node_modules_reactnativecalendars_src_img_up.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.indiplugproject.app-main-33:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_more.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_more.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.indiplugproject.app-main-33:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-xxhdpi_node_modules_reactnativecalendars_src_calendar_img_next.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-xxhdpi/node_modules_reactnativecalendars_src_calendar_img_next.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-xhdpi_node_modules_reactnativecalendars_src_img_down.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-xhdpi/node_modules_reactnativecalendars_src_img_down.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-hdpi_node_modules_reactnativecalendars_src_calendar_img_next.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-hdpi/node_modules_reactnativecalendars_src_calendar_img_next.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_calendar.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_calendar.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_play.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_play.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-hdpi_node_modules_reactnativecalendars_src_img_up.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-hdpi/node_modules_reactnativecalendars_src_img_up.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.indiplugproject.app-main-33:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_spotify.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_spotify.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.indiplugproject.app-main-33:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.indiplugproject.app-main-33:/mipmap-hdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_node_modules_reactnavigation_bottomtabs_node_modules_reactnavigation_elements_src_assets_backiconmask.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/node_modules_reactnavigation_bottomtabs_node_modules_reactnavigation_elements_src_assets_backiconmask.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-hdpi_node_modules_reactnavigation_bottomtabs_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-hdpi/node_modules_reactnavigation_bottomtabs_node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-hdpi_node_modules_reactnativecalendars_src_calendar_img_previous.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-hdpi/node_modules_reactnativecalendars_src_calendar_img_previous.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_node_modules_reactnativecalendars_src_img_up.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/node_modules_reactnativecalendars_src_img_up.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-xxxhdpi_node_modules_reactnavigation_bottomtabs_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-xxxhdpi/node_modules_reactnavigation_bottomtabs_node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_logout.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_logout.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-xxhdpi_node_modules_reactnavigation_bottomtabs_node_modules_reactnavigation_elements_src_assets_backicon.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-xxhdpi/node_modules_reactnavigation_bottomtabs_node_modules_reactnavigation_elements_src_assets_backicon.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_profile.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_profile.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.indiplugproject.app-main-33:/mipmap-xxhdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_node_modules_reactnavigation_drawer_src_views_assets_toggledrawericon.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/node_modules_reactnavigation_drawer_src_views_assets_toggledrawericon.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-xxxhdpi_node_modules_reactnativecalendars_src_calendar_img_next.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-xxxhdpi/node_modules_reactnativecalendars_src_calendar_img_next.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_close.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_close.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_images_welcome.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_images_welcome.png"
+    },
+    {
+        "merged": "com.indiplugproject.app-merged_res-32:/drawable-mdpi_src_assests_icons_rating.png.flat",
+        "source": "com.indiplugproject.app-react-27:/drawable-mdpi/src_assests_icons_rating.png"
+    }
+]

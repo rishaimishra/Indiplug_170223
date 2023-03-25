@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "386608697073",
+    "project_id": "indiplug-47d15",
+    "storage_bucket": "indiplug-47d15.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:386608697073:android:bc14cbf88197b02731a350",
+        "android_client_info": {
+          "package_name": "com.indiplugproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "386608697073-d48tsiuer74rc7lq1ro114c3v0lso92g.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.indiplugproject",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "386608697073-0nrlse2jrv5l6nilbvupeh5dc0eprjlv.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALmoTNC9RsnzcQUEPLhOmwN5jr5Q93_c8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "386608697073-0nrlse2jrv5l6nilbvupeh5dc0eprjlv.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

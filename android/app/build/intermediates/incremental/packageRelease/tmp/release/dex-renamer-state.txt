@@ -1,0 +1,7 @@
+#Fri Mar 24 00:03:44 IST 2023
+base.1=D\:\\Projects\\1.SELF\\6.Freelance\\INDIPLUG\\indiplug-mobile4\\android\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes2.dex
+path.1=classes2.dex
+base.0=D\:\\Projects\\1.SELF\\6.Freelance\\INDIPLUG\\indiplug-mobile4\\android\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\classes.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+path.0=classes.dex
