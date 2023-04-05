@@ -9,7 +9,6 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import { Button } from 'react-native-paper';
-import { color } from 'native-base/lib/typescript/theme/styled-system';
 import { TabView, SceneMap, TabBar, TabIndicator } from 'react-native-tab-view';
 import { useNavigation } from '@react-navigation/native';
 import CustomInput from '../../components/customInput/CustomInput';

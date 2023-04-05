@@ -36,6 +36,10 @@ const images = {
   locationGreen: require('../assests/icons/location-green.png'),
   musicIcon: require('../assests/images/musicIcon.png'),
   banner: require('../assests/images/EventBanner.png'),
+  user2: require('../assests/images/user-2.png'),
+  post2: require('../assests/images/post2.png'),
+  navVert: require('../assests/icons/nav_vert.png'),
+  pin: require('../assests/icons/pin.png'),
 };
 
 export default images;

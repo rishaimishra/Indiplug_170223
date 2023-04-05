@@ -1,16 +1,9 @@
-import React, {useContext, useState} from 'react';
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  ScrollView,
-  useWindowDimensions,
-} from 'react-native';
+import React, { useContext, useState } from 'react';
+import { View, Text, Image, StyleSheet, ScrollView, useWindowDimensions } from 'react-native';
 import CustomInput from '../../components/customInput/CustomInput';
 import CustomButton from '../../components/customButton/CustomButton';
 import MediaButton from '../../components/MediaButton';
-import {Button} from 'react-native-paper';
+import { Button } from 'react-native-paper';
 import Camera from '../../assests/camera.png';
 import Plug from '../../assests/plug.png';
 import Profile from '../../assests/prof_image.png';
@@ -20,8 +13,7 @@ import ImageIcon from '../../assests/icons/ImageIcon.png';
 import MarketIcon from '../../assests/icons/market.png';
 import MusicIcon from '../../assests/icons/musicIcon.png';
 import UploadIcon from '../../assests/icons/uploadIcon.png';
-import {color} from 'native-base/lib/typescript/theme/styled-system';
-import {TabView, SceneMap, TabBar, TabIndicator} from 'react-native-tab-view';
+import { TabView, SceneMap, TabBar, TabIndicator } from 'react-native-tab-view';
 
 import GalleryRoute from '../../components/galleryIcon/GalleryIcon';
 import MusicRoute from '../../components/MusicIcon/MusicIcon';
@@ -34,7 +26,7 @@ const MyProfile = () => {
   const [username, setUsername] = useState();
   const [password, setPassword] = useState();
 
-  const {height} = useWindowDimensions();
+  const { height } = useWindowDimensions();
   const renderScene = SceneMap({
     first: GalleryRoute,
     second: MusicRoute,
@@ -44,13 +36,9 @@ const MyProfile = () => {
   const layout = useWindowDimensions();
 
   const [index, setIndex] = React.useState(0);
-  const [routes] = React.useState([
-    {key: 'first'},
-    {key: 'second'},
-    {key: 'third'},
-  ]);
+  const [routes] = React.useState([{ key: 'first' }, { key: 'second' }, { key: 'third' }]);
 
-  const renderLabel = ({route}) => {
+  const renderLabel = ({ route }) => {
     switch (route.key) {
       case 'first':
         return <Image source={ImageIcon} />;
@@ -85,7 +73,7 @@ const MyProfile = () => {
 
   return (
     <ScrollView showsVerticalScrollIndicator={false}>
-      <View style={{backgroundColor: '#fff', paddingTop: 25}}>
+      <View style={{ backgroundColor: '#fff', paddingTop: 25 }}>
         <View onPress={() => console.log('Pressed')} style={styles.mediaButton}>
           <Image source={Profile} style={styles.mediaImage} />
           <Image source={Camera} style={styles.mediaCamera} />
@@ -113,17 +101,16 @@ const MyProfile = () => {
           </View>
         </View>
         <Text style={styles.description}>
-          Musician, Singer, Singing Artist Works of art make rules, rules do not
-          make works of art
+          Musician, Singer, Singing Artist Works of art make rules, rules do not make works of art
         </Text>
 
         <View style={styles.mediaGroupButton}>
           <TabView
-            renderTabBar={props => (
+            renderTabBar={(props) => (
               <TabBar
                 {...props}
-                style={{backgroundColor: '#fff', color: '#aaa'}}
-                indicatorStyle={{backgroundColor: '#008181', height: 3}}
+                style={{ backgroundColor: '#fff', color: '#aaa' }}
+                indicatorStyle={{ backgroundColor: '#008181', height: 3 }}
                 indicatorContainerStyle={{
                   backgroundColor: '#fff',
                   borderBottomColor: '#fff',
@@ -132,10 +119,10 @@ const MyProfile = () => {
               />
             )}
             style={styles.tabStyle}
-            navigationState={{index, routes}}
+            navigationState={{ index, routes }}
             renderScene={renderScene}
             onIndexChange={setIndex}
-            initialLayout={{width: layout.width}}
+            initialLayout={{ width: layout.width }}
           />
         </View>
 
@@ -145,11 +132,7 @@ const MyProfile = () => {
 
         <Text style={styles.cloudText}>fadsfasdf asdf asd f a sdf as dfa</Text>
 
-        <CustomButton
-          text="Upload Your First Photo"
-          onPress={onSignInpress}
-          type="UPLOAD"
-        />
+        <CustomButton text="Upload Your First Photo" onPress={onSignInpress} type="UPLOAD" />
       </View>
     </ScrollView>
   );

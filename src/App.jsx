@@ -3,6 +3,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 // Naviation
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { NativeBaseProvider } from 'native-base';
 import { AuthProvider } from './context/AuthContext';
 // Screens
 import Splash from './containers/Intro';
@@ -24,15 +25,17 @@ function App() {
   }, []);
 
   return (
-    <NavigationContainer>
-      <AuthProvider>
-        <Stack.Navigator screenOptions={{ headerShown: false }}>
-          <Stack.Screen name="Splash" component={Splash} />
-          {!token && <Stack.Screen name="Auth" component={Auth} />}
-          <Stack.Screen name="Home" component={Home} />
-        </Stack.Navigator>
-      </AuthProvider>
-    </NavigationContainer>
+    <NativeBaseProvider>
+      <NavigationContainer>
+        <AuthProvider>
+          <Stack.Navigator screenOptions={{ headerShown: false }}>
+            <Stack.Screen name="Splash" component={Splash} />
+            {!token && <Stack.Screen name="Auth" component={Auth} />}
+            <Stack.Screen name="Home" component={Home} />
+          </Stack.Navigator>
+        </AuthProvider>
+      </NavigationContainer>
+    </NativeBaseProvider>
   );
 }
 

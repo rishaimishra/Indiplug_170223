@@ -2,9 +2,10 @@
 /* eslint-disable react/no-unstable-nested-components */
 /* eslint-disable react/prop-types */
 import * as React from 'react';
-import { View, Text, Image, TouchableOpacity } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import images from '../../constants/images';
+import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
+import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import colors from '../../constants/colors';
 // Screens
 import Home from './HomeScreen';
 import Profile from './Profile';
@@ -13,7 +14,12 @@ const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <Tab.Navigator>
+    <Tab.Navigator
+      screenOptions={{
+        tabBarActiveTintColor: colors.primary,
+        tabBarInactiveTintColor: colors.greyText,
+      }}
+    >
       <Tab.Screen
         name="Home"
         component={Home}
@@ -21,10 +27,19 @@ export default function App() {
           headerShown: false,
           tabBarShowLabel: false,
           tabBarStyle: {
-            // height: 60,
+            height: 60,
           },
-          tabBarIcon: ({ size, focused, color }) => (
-            <Image style={{ width: size, height: size }} source={images.home} />
+          tabBarIcon: ({ focused, color }) => (
+            <SimpleLineIcons
+              name="home"
+              color={color}
+              size={24}
+              style={{
+                backgroundColor: focused ? '#C4F5F5' : '#fff',
+                borderRadius: 70,
+                padding: 10,
+              }}
+            />
           ),
         }}
       />
@@ -35,10 +50,19 @@ export default function App() {
           headerShown: false,
           tabBarShowLabel: false,
           tabBarStyle: {
-            // height: 60,
+            height: 60,
           },
-          tabBarIcon: ({ size, focused, color }) => (
-            <Image style={{ width: size, height: size }} source={images.profileActive} />
+          tabBarIcon: ({ focused, color }) => (
+            <FontAwesome
+              name="user-o"
+              color={color}
+              size={24}
+              style={{
+                backgroundColor: focused ? '#C4F5F5' : '#fff',
+                borderRadius: 70,
+                padding: 10,
+              }}
+            />
           ),
         }}
       />

@@ -1,13 +1,19 @@
-import { View, Text, Pressable } from 'react-native';
 import React from 'react';
+import { Box, ScrollView } from 'native-base';
+import Header from '../../../components/Shared/Header';
+import FeedCard from '../../../components/Shared/FeedCard';
 
 export default function HomeScreen({ navigation }) {
   return (
-    <View>
-      <Text>home</Text>
-      <Pressable onPress={() => navigation.toggleDrawer()}>
-        <Text>Open Drawer</Text>
-      </Pressable>
-    </View>
+    <Box flex={1} bg="white">
+      <Header nav={navigation} title="Timeline" />
+      <ScrollView>
+        <FeedCard />
+        <FeedCard />
+        <FeedCard />
+        <FeedCard />
+        <FeedCard />
+      </ScrollView>
+    </Box>
   );
 }
