@@ -5,7 +5,7 @@ import colors from '../../constants/colors';
 import images from '../../constants/images';
 import Normalize from '../../helpers/Dimens';
 
-export default function Header({ nav, back, menu, title }) {
+export default function Header({ nav, back, menu, cart, chat, title }) {
   return (
     <View style={styles.container}>
       {menu && (
@@ -19,6 +19,18 @@ export default function Header({ nav, back, menu, title }) {
         </Pressable>
       )}
       <Text style={styles.title}>{title}</Text>
+      <View style={styles.rightBtnContainer}>
+        {cart && (
+          <Pressable style={styles.rightBtn} onPress={() => nav.openDrawer()}>
+            <Image source={images.shoppingCart} />
+          </Pressable>
+        )}
+        {chat && (
+          <Pressable style={styles.rightBtn} onPress={() => nav.openDrawer()}>
+            <Image source={images.chat} />
+          </Pressable>
+        )}
+      </View>
     </View>
   );
 }
@@ -36,6 +48,16 @@ const styles = StyleSheet.create({
     position: 'absolute',
     left: '5%',
     padding: 5,
+  },
+  rightBtnContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    position: 'absolute',
+    right: '5%',
+  },
+  rightBtn: {
+    padding: 5,
+    marginHorizontal: 5,
   },
   title: {
     fontSize: Normalize(14),

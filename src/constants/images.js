@@ -40,6 +40,9 @@ const images = {
   post2: require('../assests/images/post2.png'),
   navVert: require('../assests/icons/nav_vert.png'),
   pin: require('../assests/icons/pin.png'),
+  shoppingCart: require('../assests/icons/shopping-cart.png'),
+  chat: require('../assests/icons/chat.png'),
+  audio: require('../assests/images/audio.png'),
 };
 
 export default images;

@@ -6,8 +6,8 @@ import FeedCard from '../../../components/Shared/FeedCard';
 export default function HomeScreen({ navigation }) {
   return (
     <Box flex={1} bg="white">
-      <Header nav={navigation} title="Timeline" />
-      <ScrollView>
+      <Header nav={navigation} chat title="Timeline" />
+      <ScrollView safeAreaTop>
         <FeedCard />
         <FeedCard />
         <FeedCard />

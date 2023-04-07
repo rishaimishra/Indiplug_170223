@@ -12,7 +12,7 @@ export default function HomeScreen() {
         <HStack alignItems="center" space={2}>
           <Image source={images.user2} w="12" h="12" alt="user icon" />
           <VStack>
-            <Box flexDirection="row">
+            <Box flexDirection="row" alignItems="center">
               <Text ml="2" fontWeight="bold" color="dark.100" fontSize="md">
                 54music
               </Text>

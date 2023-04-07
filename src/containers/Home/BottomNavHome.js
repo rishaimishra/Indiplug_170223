@@ -5,9 +5,11 @@ import * as React from 'react';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import SimpleLineIcons from 'react-native-vector-icons/SimpleLineIcons';
 import FontAwesome from 'react-native-vector-icons/FontAwesome';
+import Feather from 'react-native-vector-icons/Feather';
 import colors from '../../constants/colors';
 // Screens
 import Home from './HomeScreen';
+import Search from './Search';
 import Profile from './Profile';
 
 const Tab = createBottomTabNavigator();
@@ -32,6 +34,29 @@ export default function App() {
           tabBarIcon: ({ focused, color }) => (
             <SimpleLineIcons
               name="home"
+              color={color}
+              size={24}
+              style={{
+                backgroundColor: focused ? '#C4F5F5' : '#fff',
+                borderRadius: 70,
+                padding: 10,
+              }}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Search"
+        component={Search}
+        options={{
+          headerShown: false,
+          tabBarShowLabel: false,
+          tabBarStyle: {
+            height: 60,
+          },
+          tabBarIcon: ({ focused, color }) => (
+            <Feather
+              name="search"
               color={color}
               size={24}
               style={{
