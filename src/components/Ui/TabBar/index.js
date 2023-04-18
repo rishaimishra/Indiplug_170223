@@ -20,6 +20,7 @@ export default function TabBar({ routes, scenes }) {
         const borderColor = index === i ? colors.primary : '#C4EFEF';
         return (
           <Box
+            key={`tab-${i}`}
             borderBottomWidth="1"
             borderColor={borderColor}
             flex={1}

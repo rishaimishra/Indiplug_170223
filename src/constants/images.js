@@ -9,7 +9,7 @@ const images = {
   galleryWhite: require('../assests/icons/gallery-white.png'),
   music3: require('../assests/icons/music3.png'),
   music3White: require('../assests/icons/music-white.png'),
-  event: require('../assests/icons/event.png'),
+  eventIcon: require('../assests/icons/event.png'),
   eventWhite: require('../assests/icons/event-white.png'),
   pMusic: require('../assests/icons/p-music.png'),
   RatingIcon: require('../assests/icons/rating.png'),
@@ -43,6 +43,8 @@ const images = {
   shoppingCart: require('../assests/icons/shopping-cart.png'),
   chat: require('../assests/icons/chat.png'),
   audio: require('../assests/images/audio.png'),
+  event: require('../assests/images/event.png'),
+  product: require('../assests/images/product.png'),
 };
 
 export default images;

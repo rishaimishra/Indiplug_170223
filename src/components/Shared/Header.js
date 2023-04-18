@@ -26,7 +26,7 @@ export default function Header({ nav, back, menu, cart, chat, title }) {
           </Pressable>
         )}
         {chat && (
-          <Pressable style={styles.rightBtn} onPress={() => nav.openDrawer()}>
+          <Pressable style={styles.rightBtn} onPress={() => nav.navigate('ChatList')}>
             <Image source={images.chat} />
           </Pressable>
         )}
@@ -46,7 +46,7 @@ const styles = StyleSheet.create({
   },
   headerBtn: {
     position: 'absolute',
-    left: '5%',
+    left: '4%',
     padding: 5,
   },
   rightBtnContainer: {

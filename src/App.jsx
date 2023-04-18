@@ -9,6 +9,9 @@ import { AuthProvider } from './context/AuthContext';
 import Splash from './containers/Intro';
 import Auth from './containers/Auth';
 import Home from './containers/Home';
+// Insider Screens
+import ChatList from './containers/Home/Chat';
+import Chat from './containers/Home/Chat/chat'
 
 const Stack = createNativeStackNavigator();
 
@@ -32,6 +35,8 @@ function App() {
             <Stack.Screen name="Splash" component={Splash} />
             {!token && <Stack.Screen name="Auth" component={Auth} />}
             <Stack.Screen name="Home" component={Home} />
+            <Stack.Screen name="ChatList" component={ChatList} />
+            <Stack.Screen name="Chat" component={Chat} />
           </Stack.Navigator>
         </AuthProvider>
       </NavigationContainer>

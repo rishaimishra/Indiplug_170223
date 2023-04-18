@@ -5,7 +5,9 @@ import Header from '../../../components/Shared/Header';
 import TabBar from '../../../components/Ui/TabBar';
 // Components
 import Accounts from '../../../components/search/accounts';
-import Audios from '../../../components/search/audios.js';
+import Audios from '../../../components/search/audios';
+import Products from '../../../components/search//products';
+import Events from '../../../components/search/events';
 
 export default function SearchScreen() {
   const [searchInput, setSearchInput] = useState(null);
@@ -28,19 +30,11 @@ export default function SearchScreen() {
     },
   ]);
 
-  function ThirdRoute() {
-    return <Center flex={1}>This is Tab 3</Center>;
-  }
-
-  function FourthRoute() {
-    return <Center flex={1}>This is Tab 4 </Center>;
-  }
-
   const scenes = {
     first: Accounts,
     second: Audios,
-    third: ThirdRoute,
-    fourth: FourthRoute,
+    third: Products,
+    fourth: Events,
   };
 
   return (

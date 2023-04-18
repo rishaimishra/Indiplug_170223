@@ -11,6 +11,7 @@
     "clear": "cd android && gradlew clean && cd ../",
     "prebuild": "react-native bundle --dev false --platform android --entry-file index.js --bundle-output ./android/app/src/main/assets/index.android.bundle --assets-dest ./android/app/src/main/res",
     "build": "cd android && gradlew assembleDebug && cd ../",
+    "debugbuild": "cd android && gradlew clean && gradlew assembleDebug && cd ../",
     "releasebuild": "cd android && gradlew clean && gradlew assembleRelease && cd ../"
   },
   "dependencies": {
@@ -64,5 +65,8 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "volta": {
+    "node": "14.16.1"
   }
 }

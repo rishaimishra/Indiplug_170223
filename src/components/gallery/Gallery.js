@@ -32,7 +32,7 @@ function Gallery() {
     <View style={styles.container}>
       <View style={styles.galleryContainer}>
         {list.map((image, i) => (
-          <TouchableOpacity>
+          <TouchableOpacity key={`g=-${i}`}>
             <Image key={`key-${i + 1}`} source={image} style={styles.galleryImage} />
           </TouchableOpacity>
         ))}

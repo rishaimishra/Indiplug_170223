@@ -6,7 +6,7 @@ const styles = StyleSheet.create({
   root: {
     flexGrow: 1,
     padding: Normalize(15),
-    backgroundColor: colors.white,
+    backgroundColor: colors.white
   },
   container: {
     flex: 1,
@@ -19,6 +19,7 @@ const styles = StyleSheet.create({
     position: 'relative',
     justifyContent: 'center',
     alignItems: 'center',
+    marginTop: Normalize(10)
   },
   mediaPlug: {
     width: Normalize(90),

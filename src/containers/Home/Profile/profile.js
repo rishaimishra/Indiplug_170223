@@ -95,7 +95,7 @@ function MyProfile({ navigation }) {
 
           <View style={styles.mediaGroupButton}>
             <TouchableOpacity
-              style={[styles.tabIcon, showTab === 1 ? styles.tabIconActive : '']}
+              style={[styles.tabIcon, showTab === 1 ? styles.tabIconActive : '']} 
               onPress={() => handletab(1)}
             >
               <Image
@@ -117,7 +117,7 @@ function MyProfile({ navigation }) {
               onPress={() => handletab(3)}
             >
               <Image
-                source={showTab === 3 ? images.eventWhite : images.event}
+                source={showTab === 3 ? images.eventWhite : images.eventIcon}
                 style={styles.tabStyle}
               />
             </TouchableOpacity>
@@ -129,6 +129,7 @@ function MyProfile({ navigation }) {
             {showTab === 3 ? <EventList /> : ''}
           </View>
         </View>
+        <View style={{height: 80}} />
       </ScrollView>
     </>
   );

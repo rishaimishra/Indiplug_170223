@@ -10,6 +10,7 @@ import colors from '../../constants/colors';
 // Screens
 import Home from './HomeScreen';
 import Search from './Search';
+import Activity from './Activity'
 import Profile from './Profile';
 
 const Tab = createBottomTabNavigator();
@@ -23,7 +24,7 @@ export default function App() {
       }}
     >
       <Tab.Screen
-        name="Home"
+        name="HomeTab"
         component={Home}
         options={{
           headerShown: false,
@@ -57,6 +58,29 @@ export default function App() {
           tabBarIcon: ({ focused, color }) => (
             <Feather
               name="search"
+              color={color}
+              size={24}
+              style={{
+                backgroundColor: focused ? '#C4F5F5' : '#fff',
+                borderRadius: 70,
+                padding: 10,
+              }}
+            />
+          ),
+        }}
+      />
+      <Tab.Screen
+        name="Activity"
+        component={Activity}
+        options={{
+          headerShown: false,
+          tabBarShowLabel: false,
+          tabBarStyle: {
+            height: 60,
+          },
+          tabBarIcon: ({ focused, color }) => (
+            <Feather
+              name="heart"
               color={color}
               size={24}
               style={{
