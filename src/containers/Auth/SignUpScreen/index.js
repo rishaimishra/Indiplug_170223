@@ -29,7 +29,6 @@ function SignUpContainer() {
   };
 
   const onSignUp = (val) => {
-    console.log(val);
     setUser(val);
     setStep(3);
   };

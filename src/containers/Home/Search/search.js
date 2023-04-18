@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import { Box, Icon, Input, Pressable, Center } from 'native-base';
+import { Box, Icon, Input, Pressable } from 'native-base';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import Header from '../../../components/Shared/Header';
 import TabBar from '../../../components/Ui/TabBar';
 // Components
 import Accounts from '../../../components/search/accounts';
 import Audios from '../../../components/search/audios';
-import Products from '../../../components/search//products';
 import Events from '../../../components/search/events';
 
 export default function SearchScreen() {
@@ -22,10 +21,6 @@ export default function SearchScreen() {
     },
     {
       key: 'third',
-      title: 'Products',
-    },
-    {
-      key: 'fourth',
       title: 'Events',
     },
   ]);
@@ -33,8 +28,7 @@ export default function SearchScreen() {
   const scenes = {
     first: Accounts,
     second: Audios,
-    third: Products,
-    fourth: Events,
+    third: Events,
   };
 
   return (

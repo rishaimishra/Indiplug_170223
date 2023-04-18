@@ -4,7 +4,9 @@ import { View, Text, TextInput } from 'react-native';
 import Toast from 'react-native-simple-toast';
 import CustomButton from '../../../components/Ui/customButton';
 import { AuthContext } from '../../../context/AuthContext';
+// Constants
 import styles from './styles';
+import colors from '../../../constants/colors';
 
 function OtpScreen({ user, handleThirdScreen }) {
   const [password, setPassword] = useState();
@@ -13,7 +15,7 @@ function OtpScreen({ user, handleThirdScreen }) {
 
   const handleSetPassword = async () => {
     if (!otp && !password) {
-      Toast.showWithGravity('Please enter all the values.', Toast.SHORT, Toast.TOP);
+      Toast.showWithGravity('Please enter all the values', Toast.SHORT, Toast.TOP);
     } else {
       const resp = await setPassAndVerifyOtp(otp, user.lastid, password);
       if (resp) {
@@ -34,16 +36,21 @@ function OtpScreen({ user, handleThirdScreen }) {
       <View style={styles.inputContainer}>
         <TextInput
           value={otp}
+          autoCapitalize="none"
           onChangeText={(text) => setOtp(text)}
           placeholder="Enter OTP"
+          placeholderTextColor={colors.greyText2}
           style={styles.input}
         />
       </View>
       <View style={styles.inputContainer}>
         <TextInput
+          secureTextEntry
           value={password}
+          autoCapitalize="none"
           onChangeText={(text) => setPassword(text)}
           placeholder="Set Password"
+          placeholderTextColor={colors.greyText2}
           style={styles.input}
         />
       </View>

@@ -29,7 +29,7 @@ function CameraModal({ modalShow, handleUpload, handleImageChange }) {
     // };
     const granted = await PermissionsAndroid.request(PermissionsAndroid.PERMISSIONS.CAMERA);
     if (granted === PermissionsAndroid.RESULTS.GRANTED) {
-      const result = await launchCamera({ includeBase64: true });
+      const result = await launchCamera();
       handleImageChange(result.assets[0].uri);
     }
   };

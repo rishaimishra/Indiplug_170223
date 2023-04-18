@@ -42,11 +42,11 @@ export function AuthProvider({ children }) {
     };
     try {
       response = await axios.post(`${BASE_URL}/user-auth/register`, obj);
-      Toast.showWithGravity('Please try again.', Toast.SHORT, Toast.TOP);
+      Toast.showWithGravity('Please try again', Toast.SHORT, Toast.TOP);
       setIsLoading(false);
     } catch (error) {
       console.error(error);
-      Toast.showWithGravity('Something went wrong.', Toast.SHORT, Toast.TOP);
+      Toast.showWithGravity('Something went wrong', Toast.SHORT, Toast.TOP);
       setIsLoading(false);
     }
     return response;
@@ -62,11 +62,11 @@ export function AuthProvider({ children }) {
     };
     try {
       response = await axios.post(`${BASE_URL}/user-auth/verify-otp`, obj);
-      Toast.showWithGravity('Please try again.', Toast.SHORT, Toast.TOP);
+      Toast.showWithGravity('Please try again', Toast.SHORT, Toast.TOP);
       setIsLoading(false);
     } catch (error) {
       console.error(error);
-      Toast.showWithGravity('Something went wrong.', Toast.SHORT, Toast.TOP);
+      Toast.showWithGravity('Something went wrong', Toast.SHORT, Toast.TOP);
       setIsLoading(false);
     }
     return response;
@@ -87,17 +87,17 @@ export function AuthProvider({ children }) {
           await AsyncStorage.setItem('token', res.data.token);
           await AsyncStorage.setItem('user', JSON.stringify(res.data.user_details));
           setIsLoading(false);
-          Toast.showWithGravity('Logged in successfully.', Toast.SHORT, Toast.TOP);
+          Toast.showWithGravity('Logged in successfully', Toast.SHORT, Toast.TOP);
           reset('Home');
         } else {
-          Toast.showWithGravity('Somthing went wrong.', Toast.SHORT, Toast.TOP);
+          Toast.showWithGravity('Somthing went wrong', Toast.SHORT, Toast.TOP);
           setIsLoading(false);
         }
       })
       .catch((err) => {
         console.error('Login Error: ', err);
         setIsLoading(false);
-        Toast.showWithGravity('Please enter correct credentials.', Toast.SHORT, Toast.TOP);
+        Toast.showWithGravity('Please enter correct credentials', Toast.SHORT, Toast.TOP);
       });
   };
 
@@ -123,12 +123,12 @@ export function AuthProvider({ children }) {
       if (response.data.status === '200') {
         Toast.showWithGravity(response.data.message, Toast.SHORT, Toast.TOP);
       } else {
-        Toast.showWithGravity('Please try again.', Toast.SHORT, Toast.TOP);
+        Toast.showWithGravity('Please try again', Toast.SHORT, Toast.TOP);
       }
       setIsLoading(false);
     } catch (error) {
       console.error(error);
-      Toast.showWithGravity('Something went wrong.', Toast.SHORT, Toast.TOP);
+      Toast.showWithGravity('Something went wrong', Toast.SHORT, Toast.TOP);
       setIsLoading(false);
     }
     return response;
@@ -148,7 +148,7 @@ export function AuthProvider({ children }) {
       setIsLoading(false);
     } catch (error) {
       console.error(error);
-      Toast.showWithGravity('Something went wrong.', Toast.SHORT, Toast.TOP);
+      Toast.showWithGravity('Something went wrong', Toast.SHORT, Toast.TOP);
       setIsLoading(false);
     }
     return response;
@@ -159,6 +159,20 @@ export function AuthProvider({ children }) {
     await AsyncStorage.removeItem('token');
     await AsyncStorage.removeItem('user');
     navigation.navigate('Splash');
+  };
+
+  const POST = async (url, body) => {
+    setIsLoading(true);
+    try {
+      const response = await axios.post(`${BASE_URL}${url}`, body);
+      console.log('response', response);
+      setIsLoading(false);
+      return response;
+    } catch (error) {
+      console.log('error', error);
+      setIsLoading(false);
+      return error;
+    }
   };
 
   return (
@@ -172,6 +186,7 @@ export function AuthProvider({ children }) {
         createProf,
         fetchProfileDetails,
         logout,
+        POST,
       }}
     >
       {children}

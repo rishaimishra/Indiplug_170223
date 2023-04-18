@@ -5,7 +5,9 @@ import Toast from 'react-native-simple-toast';
 import CustomButton from '../../../components/Ui/customButton';
 import SocialSignIn from '../../../components/Ui/socialSignInButtons';
 import { AuthContext } from '../../../context/AuthContext';
+// Constants
 import styles from './styles';
+import colors from '../../../constants/colors';
 
 function SignUpScreen({ category, handleSecondScreen }) {
   const [username, setUsername] = useState('');
@@ -15,11 +17,11 @@ function SignUpScreen({ category, handleSecondScreen }) {
 
   const handleSignUp = async () => {
     if (!isEmail(username)) {
-      Toast.showWithGravity('Please enter a valid email.', Toast.SHORT, Toast.TOP);
+      Toast.showWithGravity('Please enter a valid email', Toast.SHORT, Toast.TOP);
     } else {
       const resp = await register(username, category);
       if (resp) {
-        Toast.showWithGravity('Please check your mail.', Toast.SHORT, Toast.TOP);
+        Toast.showWithGravity('Please check your mail', Toast.SHORT, Toast.TOP);
         setUsername('');
         handleSecondScreen(resp.data);
       }
@@ -35,8 +37,10 @@ function SignUpScreen({ category, handleSecondScreen }) {
       <View style={styles.inputContainer}>
         <TextInput
           value={username}
+          autoCapitalize="none"
           onChangeText={(text) => setUsername(text)}
           placeholder="Your Email"
+          placeholderTextColor={colors.greyText2}
           style={styles.input}
         />
       </View>

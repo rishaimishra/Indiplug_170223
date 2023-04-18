@@ -59,5 +59,6 @@ const styles = StyleSheet.create({
   btnText: {
     fontSize: Normalize(width / 25),
     marginLeft: Normalize(10),
+    color: colors.greyText2,
   },
 });

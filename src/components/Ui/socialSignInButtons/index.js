@@ -28,7 +28,7 @@ function SocialSignIn() {
       await GoogleSignin.hasPlayServices();
       const userInfo = await GoogleSignin.signIn();
       console.log('userInfo', userInfo.user);
-      Toast.showWithGravity('Google Sign in successfull.', Toast.SHORT, Toast.TOP);
+      Toast.showWithGravity('Google Sign in successfull', Toast.SHORT, Toast.TOP);
       // reset('Home');
     } catch (error) {
       console.log(error);

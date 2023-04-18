@@ -45,6 +45,7 @@ const images = {
   audio: require('../assests/images/audio.png'),
   event: require('../assests/images/event.png'),
   product: require('../assests/images/product.png'),
+  send: require('../assests/icons/send.png'),
 };
 
 export default images;

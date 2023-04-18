@@ -26,6 +26,9 @@ const styles = StyleSheet.create({
   input: {
     color: colors.greyText,
   },
+  placeholderColor: {
+    color: colors.lightGrey,
+  },
 });
 
 export default styles;

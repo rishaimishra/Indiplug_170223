@@ -10,6 +10,7 @@ function CustomInput({ value, setValue, placeholder, secureTextEntry }) {
         value={value}
         onChangeText={setValue}
         placeholder={placeholder}
+        placeholderTextColor={colors.greyText2}
         style={styles.input}
         secureTextEntry={secureTextEntry}
       />

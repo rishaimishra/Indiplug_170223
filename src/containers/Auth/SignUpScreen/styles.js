@@ -16,6 +16,9 @@ const styles = StyleSheet.create({
     color: colors.greyText2,
     marginVertical: Normalize(10),
   },
+  signUpContent: {
+    color: colors.greyText2,
+  },
   inputContainer: {
     backgroundColor: colors.bgInput,
     width: '100%',

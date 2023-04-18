@@ -5,7 +5,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import images from '../../constants/images';
 
-export default function HomeScreen() {
+export default function HomeScreen({ onPressComment }) {
   return (
     <>
       <VStack px="4" space="4" mt="6">
@@ -41,7 +41,7 @@ export default function HomeScreen() {
               7.8K
             </Text>
           </Box>
-          <Box alignItems="center" flexDirection="row">
+          <Pressable alignItems="center" flexDirection="row" onPress={() => onPressComment('id')}>
             <Icon
               as={Ionicons}
               name="chatbubble-ellipses-outline"
@@ -52,7 +52,7 @@ export default function HomeScreen() {
             <Text fontSize="md" color="dark.400">
               122
             </Text>
-          </Box>
+          </Pressable>
           <Box alignItems="center" flexDirection="row">
             <Icon as={EvilIcons} name="retweet" color="dark.400" size="xl" mr="1" />
             <Text fontSize="md" color="dark.400">

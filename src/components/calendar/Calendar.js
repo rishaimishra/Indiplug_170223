@@ -1,30 +1,18 @@
-import React, { useContext, useState, useEffect } from 'react';
-import {
-  View,
-  Text,
-  Image,
-  StyleSheet,
-  ScrollView,
-  useWindowDimensions,
-  TouchableOpacity,
-  Pressable,
-} from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { View, Text, Image, StyleSheet, Pressable } from 'react-native';
 import { Calendar } from 'react-native-calendars';
 import moment from 'moment';
-import Post from '../../assests/images/post.png';
 
 import colors from '../../constants/colors';
 import images from '../../constants/images';
 import Normalize from '../../helpers/Dimens';
-// import { useNavigation } from '@react-navigation/native';
-// import { AuthContext } from '../../context/AuthContext';
 
 function EventList() {
   const getCurrentDate = () => {
     const date = new Date();
     return moment(date).format('YYYY-MM-DD');
   };
-  const [list, setList] = useState({
+  const [list] = useState({
     [`${getCurrentDate()}`]: {
       customStyles: {
         container: {
@@ -82,21 +70,6 @@ function EventList() {
     console.log('currentDate', getCurrentDate());
   }, []);
 
-  const [username, setUsername] = useState();
-  const [display, setDisplay] = useState(true);
-  const { height } = useWindowDimensions();
-  // const navigation = useNavigation();
-  // const {isLoading, login} = useContext(AuthContext);
-
-  const onSignInpress = () => {
-    // console.log(AsyncStorage.getItem());
-    console.warn('sign in press');
-    // login(username, password);
-
-    // validate user
-    // navigation.navigate('Home');
-  };
-
   return (
     <View style={styles.container}>
       <Calendar
@@ -114,7 +87,7 @@ function EventList() {
         }}
       />
       <View style={[styles.row, styles.headingContainer]}>
-        <Text style={styles.heading}>Today's Events</Text>
+        <Text style={styles.heading}>Todays Events</Text>
         <Pressable style={styles.addEventBtn}>
           <Text style={styles.addEventBtnTxt}>+ Add Event</Text>
         </Pressable>
@@ -167,13 +140,13 @@ const styles = StyleSheet.create({
   desc: {},
   eventTime: {
     fontSize: Normalize(12),
-    colors: colors.greyText2,
+    color: colors.greyText2,
     marginBottom: Normalize(5),
   },
   eventName: {
     fontSize: Normalize(12),
     fontWeight: 'bold',
-    colors: colors.dark,
+    color: colors.greyText2,
     marginBottom: Normalize(15),
     width: '90%',
   },
@@ -182,7 +155,7 @@ const styles = StyleSheet.create({
   },
   location: {
     fontSize: Normalize(12),
-    colors: colors.greyText2,
+    color: colors.greyText2,
   },
 });
 

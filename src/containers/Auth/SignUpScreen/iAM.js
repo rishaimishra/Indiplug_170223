@@ -29,7 +29,7 @@ function IAmScreen({ handleFirstScreen }) {
 
   const onSelectRadioBtn = () => {
     if (selectOption) handleFirstScreen(selectOption);
-    else Toast.showWithGravity('Please select one option.', Toast.SHORT, Toast.TOP);
+    else Toast.showWithGravity('Please select one option', Toast.SHORT, Toast.TOP);
   };
 
   return (
