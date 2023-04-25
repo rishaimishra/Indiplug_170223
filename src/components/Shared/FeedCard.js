@@ -1,14 +1,36 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { HStack, VStack, Box, Divider, Image, Text, Icon, Pressable } from 'native-base';
 import AndDesignIcon from 'react-native-vector-icons/AntDesign';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
 import images from '../../constants/images';
+import ReplugModal from '../replugModal';
 
-export default function HomeScreen({ onPressComment }) {
+export default function FeedCard({ onPressComment, handleReplug, handleQuotePlug }) {
+  const [showReplugModal, setShowReplugModal] = useState(false);
+  const onPressReplug = () => {
+    setShowReplugModal(!showReplugModal);
+  };
+  const handleCloseModal = () => {
+    setShowReplugModal(!showReplugModal);
+  };
+  const handlePressReplug = () => {
+    handleReplug();
+    setShowReplugModal(!showReplugModal);
+  };
+  const handlePressQuotePlug = () => {
+    handleQuotePlug();
+    setShowReplugModal(!showReplugModal);
+  };
   return (
     <>
       <VStack px="4" space="4" mt="6">
+        <ReplugModal
+          modalShow={showReplugModal}
+          onCloseModal={handleCloseModal}
+          onPressReplug={handlePressReplug}
+          onPressQuotePlug={handlePressQuotePlug}
+        />
         <HStack alignItems="center" space={2}>
           <Image source={images.user2} w="12" h="12" alt="user icon" />
           <VStack>
@@ -53,12 +75,16 @@ export default function HomeScreen({ onPressComment }) {
               122
             </Text>
           </Pressable>
-          <Box alignItems="center" flexDirection="row">
+          <Pressable
+            alignItems="center"
+            flexDirection="row"
+            onPress={() => onPressReplug('replug')}
+          >
             <Icon as={EvilIcons} name="retweet" color="dark.400" size="xl" mr="1" />
             <Text fontSize="md" color="dark.400">
               1.2K
             </Text>
-          </Box>
+          </Pressable>
         </HStack>
       </VStack>
       <Divider />

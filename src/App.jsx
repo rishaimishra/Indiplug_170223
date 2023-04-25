@@ -13,6 +13,7 @@ import ForgotPassword from './containers/Auth/ForgotPassword';
 import ChatList from './containers/Home/Chat';
 import Chat from './containers/Home/Chat/chat';
 import CommentScreen from './containers/Home/Comment';
+import QuotePlugScreen from './containers/Home/QuotePlug';
 
 const Stack = createNativeStackNavigator();
 
@@ -29,6 +30,7 @@ function App() {
             <Stack.Screen name="ChatList" component={ChatList} />
             <Stack.Screen name="Chat" component={Chat} />
             <Stack.Screen name="Comments" component={CommentScreen} />
+            <Stack.Screen name="QuotePlug" component={QuotePlugScreen} />
           </Stack.Navigator>
         </AuthProvider>
       </NavigationContainer>

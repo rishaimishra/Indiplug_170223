@@ -46,6 +46,7 @@ const images = {
   event: require('../assests/images/event.png'),
   product: require('../assests/images/product.png'),
   send: require('../assests/icons/send.png'),
+  replug: require('../assests/icons/replug.png'),
 };
 
 export default images;
