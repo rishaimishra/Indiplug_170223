@@ -14,6 +14,7 @@ export default function ForgotPassword({ navigation }) {
   const [userEmail, setUserEmail] = useState();
   const [otp, setOtp] = useState();
   const [password, setPassword] = useState();
+  const [confPassword, setConfPassword] = useState();
   const [isOtoVerified, setIsOtoVerified] = useState(false);
 
   const isEmail = (email) => /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/.test(email);
@@ -38,6 +39,8 @@ export default function ForgotPassword({ navigation }) {
       Toast.showWithGravity('Please enter your OTP', Toast.SHORT, Toast.TOP);
     } else if (!password) {
       Toast.showWithGravity('Please enter your password', Toast.SHORT, Toast.TOP);
+    } else if (password !== confPassword) {
+      Toast.showWithGravity('Password & Confirm Password should be same', Toast.SHORT, Toast.TOP);
     } else {
       const body = {
         otp,
@@ -67,45 +70,59 @@ export default function ForgotPassword({ navigation }) {
 
       <Box p="6" mt="20%">
         <Image source={images.logo} resizeMode="contain" w="150" alt="logo" />
-        <Text fontSize="2xl" ml="2" mb="15">
-          Reset your password
+        <Text fontSize="4xl" ml="2" mb="15" color="black" w="50%">
+          {isOtoVerified ? 'Set password' : 'Reset password'}
         </Text>
-        {/* Email */}
-        <View style={styles.inputContainer}>
-          <TextInput
-            editable={!isOtoVerified}
-            value={userEmail}
-            autoCapitalize="none"
-            onChangeText={(text) => setUserEmail(text)}
-            placeholder="Your Email"
-            placeholderTextColor={colors.greyText2}
-            style={styles.input}
-          />
-        </View>
+        {!isOtoVerified && (
+          <Box>
+            {/* Email */}
+            <Text mt="10" fontSize="md" color="dark.300">
+              An email containing unique code will be sent to the mailbox. Please check it.
+            </Text>
+            <View style={styles.inputContainer}>
+              <TextInput
+                value={userEmail}
+                autoCapitalize="none"
+                onChangeText={(text) => setUserEmail(text)}
+                placeholder="Your Email"
+                placeholderTextColor={colors.greyText2}
+                style={styles.input}
+              />
+            </View>
+          </Box>
+        )}
         {isOtoVerified && (
           <Box mt="10">
-            <Text fontSize="md" color={colors.greyText2} textAlign="center">
-              (OTP has been sent to your email)
-            </Text>
             {/* OTP */}
             <View style={styles.inputContainer}>
               <TextInput
                 value={otp}
                 autoCapitalize="none"
                 onChangeText={(text) => setOtp(text)}
-                placeholder="Enter OTP"
+                placeholder="Enter the code recieved on email"
                 placeholderTextColor={colors.greyText2}
                 style={styles.input}
               />
             </View>
             {/* New Password */}
-
             <View style={styles.inputContainer}>
               <TextInput
                 value={password}
                 autoCapitalize="none"
                 onChangeText={(text) => setPassword(text)}
                 placeholder="New Password"
+                placeholderTextColor={colors.greyText2}
+                style={styles.input}
+                secureTextEntry
+              />
+            </View>
+            {/* Confirm Password */}
+            <View style={styles.inputContainer}>
+              <TextInput
+                value={confPassword}
+                autoCapitalize="none"
+                onChangeText={(text) => setConfPassword(text)}
+                placeholder="Confirm Password"
                 placeholderTextColor={colors.greyText2}
                 style={styles.input}
                 secureTextEntry
