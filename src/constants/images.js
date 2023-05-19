@@ -34,6 +34,7 @@ const images = {
   pause: require('../assests/icons/pause.png'),
   logout: require('../assests/icons/logout.png'),
   locationGreen: require('../assests/icons/location-green.png'),
+  locationGray: require('../assests/icons/locationGray.png'),
   musicIcon: require('../assests/images/musicIcon.png'),
   banner: require('../assests/images/EventBanner.png'),
   user2: require('../assests/images/user-2.png'),
@@ -47,6 +48,17 @@ const images = {
   product: require('../assests/images/product.png'),
   send: require('../assests/icons/send.png'),
   replug: require('../assests/icons/replug.png'),
+  share: require('../assests/icons/share.png'),
+  edit: require('../assests/icons/edit.png'),
+  delete: require('../assests/icons/delete.png'),
+  copy: require('../assests/icons/copy.png'),
+  calenderGreen: require('../assests/icons/calender-green.png'),
+  clockGreen: require('../assests/icons/clock-green.png'),
+  galleryGray: require('../assests/icons/gallery-gray.png'),
+  musicGray: require('../assests/icons/music-gray.png'),
+  musicGreen: require('../assests/icons/music-green-icon.png'),
+  cameraGreen: require('../assests/icons/camera-icon.png'),
+  eventSuccess: require('../assests/images/event-success.png'),
 };
 
 export default images;

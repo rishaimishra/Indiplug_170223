@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Modal, StyleSheet, Text, Pressable, View, Image, TouchableOpacity } from 'react-native';
+import { Modal, StyleSheet, Pressable, View, Image, TouchableOpacity } from 'react-native';
+import { Text } from 'native-base';
 import Sound from 'react-native-sound';
 import colors from '../constants/colors';
 import Normalize from '../helpers/Dimens';

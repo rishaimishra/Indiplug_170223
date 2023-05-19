@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import {
   Modal,
   StyleSheet,
-  Text,
   Pressable,
   View,
   Image,
   PermissionsAndroid,
   Dimensions,
 } from 'react-native';
+import { Text } from 'native-base';
 import { launchCamera, launchImageLibrary } from 'react-native-image-picker';
 import colors from '../constants/colors';
 import Normalize from '../helpers/Dimens';

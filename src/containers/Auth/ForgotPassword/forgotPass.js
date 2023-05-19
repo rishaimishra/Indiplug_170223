@@ -26,6 +26,7 @@ export default function ForgotPassword({ navigation }) {
       const body = { username: userEmail };
       try {
         const response = await POST('/user-auth/send-otp-verification', body);
+        console.log(response);
         if (response.data.status === 200) setIsOtoVerified(true);
         else Toast.showWithGravity('Please try again', Toast.SHORT, Toast.TOP);
       } catch (error) {

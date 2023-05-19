@@ -1,12 +1,7 @@
-import React, { useContext, useState } from 'react';
-import { View, Text, Image, StyleSheet, useWindowDimensions, TouchableOpacity } from 'react-native';
-
-import DocumentPicker, {
-  DirectoryPickerResponse,
-  DocumentPickerResponse,
-  isInProgress,
-  types,
-} from 'react-native-document-picker';
+import React, { useState } from 'react';
+import { View, Text, Image, StyleSheet, TouchableOpacity } from 'react-native';
+import DocumentPicker, { isInProgress, types } from 'react-native-document-picker';
+import MusicMoreModal from '../musicMoreModal';
 
 import images from '../../constants/images';
 import colors from '../../constants/colors';
@@ -21,6 +16,7 @@ import CustomButton from '../Ui/customButton';
 function Music() {
   const [musicList, setMusicList] = useState([]);
   const [display, setDisplay] = useState(false);
+  const [moreModal, setMoreModal] = useState(false);
   const [music, setMusic] = useState('');
 
   // const navigation = useNavigation();
@@ -84,10 +80,11 @@ function Music() {
             <TouchableOpacity style={styles.iconBtn}>
               <Image source={images.headphone} style={styles.socialIcon} />
             </TouchableOpacity>
-            <TouchableOpacity style={styles.iconBtn}>
+            <TouchableOpacity style={styles.iconBtn} onPress={() => setMoreModal(!moreModal)}>
               <Image source={images.more} style={styles.socialIcon} />
             </TouchableOpacity>
           </View>
+          <MusicMoreModal modalShow={moreModal} handleUpload={() => setMoreModal(!moreModal)} />
         </TouchableOpacity>
       ))}
       <MusicModal modalShow={display} data={music} handleClose={() => setDisplay(!display)} />

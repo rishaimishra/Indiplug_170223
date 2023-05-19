@@ -1,13 +1,17 @@
 import React, { useState, useEffect } from 'react';
-import { View, Text, Image, StyleSheet, Pressable } from 'react-native';
+import { View, Text, Image, StyleSheet, Pressable, TouchableOpacity } from 'react-native';
 import { Calendar } from 'react-native-calendars';
 import moment from 'moment';
+import { useNavigation } from '@react-navigation/native';
 
 import colors from '../../constants/colors';
 import images from '../../constants/images';
 import Normalize from '../../helpers/Dimens';
 
+import AddEventModal from '../addEventModal';
+
 function EventList() {
+  const navigation = useNavigation();
   const getCurrentDate = () => {
     const date = new Date();
     return moment(date).format('YYYY-MM-DD');
@@ -66,6 +70,8 @@ function EventList() {
     },
   });
 
+  const [showModal, setShowModal] = useState(false);
+
   useEffect(() => {
     console.log('currentDate', getCurrentDate());
   }, []);
@@ -88,11 +94,15 @@ function EventList() {
       />
       <View style={[styles.row, styles.headingContainer]}>
         <Text style={styles.heading}>Todays Events</Text>
-        <Pressable style={styles.addEventBtn}>
+        <Pressable style={styles.addEventBtn} onPress={() => setShowModal(!showModal)}>
           <Text style={styles.addEventBtnTxt}>+ Add Event</Text>
         </Pressable>
+        <AddEventModal modalShow={showModal} handleUpload={() => setShowModal(!showModal)} />
       </View>
-      <View style={[styles.row, styles.eventContainer]}>
+      <TouchableOpacity
+        style={[styles.row, styles.eventContainer]}
+        onPress={() => navigation.navigate('EventDetails')}
+      >
         <Image source={images.banner} style={styles.banner} />
         <View style={styles.desc}>
           <Text style={styles.eventTime}>Feb 23, 8:30 AM - 9:30 AM</Text>
@@ -102,7 +112,7 @@ function EventList() {
             <Text style={styles.location}>Indonesia</Text>
           </View>
         </View>
-      </View>
+      </TouchableOpacity>
     </View>
   );
 }

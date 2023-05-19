@@ -14,6 +14,9 @@ import ChatList from './containers/Home/Chat';
 import Chat from './containers/Home/Chat/chat';
 import CommentScreen from './containers/Home/Comment';
 import QuotePlugScreen from './containers/Home/QuotePlug';
+import EventDetailsScreen from './containers/Home/EventDetails';
+import AddEventScreen from './containers/Home/AddEvent';
+import EventSuccessCreen from './containers/Home/EventSuccess';
 
 const Stack = createNativeStackNavigator();
 
@@ -31,6 +34,9 @@ function App() {
             <Stack.Screen name="Chat" component={Chat} />
             <Stack.Screen name="Comments" component={CommentScreen} />
             <Stack.Screen name="QuotePlug" component={QuotePlugScreen} />
+            <Stack.Screen name="EventDetails" component={EventDetailsScreen} />
+            <Stack.Screen name="AddEvent" component={AddEventScreen} />
+            <Stack.Screen name="EventSuccess" component={EventSuccessCreen} />
           </Stack.Navigator>
         </AuthProvider>
       </NavigationContainer>
